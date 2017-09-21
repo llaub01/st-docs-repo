@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" setup, connection sharing, beam setup, wifi">
+<title>Beam and BeamPro SPS UI User Guide  | </title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/modern-business.css">
+<link rel="stylesheet" href="/css/lavish-bootstrap.css">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005/feed.xml">
+
+
+
+
+ 
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://suitabletech.com"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a class="no_icon" href="">Documentation</a></li>
+                
+                
+                
+                <li><a href="https://support.suitabletech.com" target="_blank" class="no_icon">Help Center</a></li>
+                
+                
+                
+                <li><a href="https://suitabletech.com/manage" target="_blank" class="no_icon">Beam Manager</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Beam and BeamPro SPS UI User Guide">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <!-- <li class="sidebarTitle">Beam Smart Presence Systems </li> -->
+    
+    
+    
+    
+    <li>
+    
+        
+        <a href="/">Overview</a>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Information and Requirements</a>
+        <ul>
+            
+            
+            
+            <li><a href="/product-info/">Beam Information and Requirements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/network/">Beam Network</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/safety-security/">Beam Safety and Security</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/4g/">Supported 4G Modems and Hotspots</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam User</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-user/">Getting Started as a Beam User</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-user/using-beam-app/">Using the Beam App FAQ</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam Administrator</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-admin/">Getting Started as a Beam Administrator</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/basic-beam/">Managing with the Basic Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/adv-beam/">Managing with the Advanced Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/usb-config/">Configure Beam with a USB Flash Drive</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/network-diagnostics/">Run Network Diagnostics from the Beam App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam User Guides</a>
+        <ul>
+            
+            
+            
+            <li><a href="/user-guides/">Beam User Guides</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/desktop-app/">Beam Desktop App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/mobile-app/">Beam Mobile App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/basic-beam-mgr/">Basic Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/adv-beam-mgr/">Advanced Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="/user-guides/beam-beampro-ui/">Beam and BeamPro SPS UI User Guide</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam How-To Videos</a>
+        <ul>
+            
+            
+            
+            <li><a href="/how-to-vids/">Beam How-To Videos</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Assembly Disassembly and Packaging</a>
+        <ul>
+            
+            
+            
+            <li><a href="/assembly-instr/">Beam Assembly Disassembly and Packaging</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Management API Documentation</a>
+        <ul>
+            
+            
+            
+            <li><a href="/api/">Beam Management API Documentation</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Beam and BeamPro SPS UI User Guide</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+    
+
+    
+
+    
+
+  <h2 id="overview">Overview</h2>
+<p>This guide contains information about the Beam SPS (Smart Presence System) UI (User Interface).</p>
+
+<p>The Beam UI (User Interface) is used to configure network and all settings on your Beam™ or BeamPro™.</p>
+
+<h2 id="launch-the-beam-ui">Launch the Beam UI</h2>
+
+<p>To access the Beam SPS UI, plug a USB keyboard into the USB port of your Beam. The USB ports are located on the front left corner of the Beam™ screen or behind the rear hatch on the back of the BeamPro™ head.</p>
+
+<p><strong>Navigation: Use ARROW KEYS to navigate, ENTER to select, ESC to go back, CTRL+SHIFT+N to show network adapter statistics and CTRL+SHIFT+A for advanced options on screens which offer an advanced mode.</strong></p>
+
+<h2 id="initial-setup-wizard">Initial Setup Wizard</h2>
+
+<p>The first time you bring up the Beam SPS UI, you will be prompted with a setup wizard.  This wizard will have you set the language of your Beam and connect the device to WiFi.</p>
+
+<ul>
+  <li>
+    <p>Select your language</p>
+
+    <p><img src="/img/beam-ui/1-1-Language.png" alt="LanguageWizard1" /></p>
+  </li>
+  <li>
+    <p>Setup your network</p>
+
+    <p><img src="/img/beam-ui/1-2-Wifi.png" alt="NetworkWizard" /></p>
+
+    <p>For WPA/WPA2 Personal networks you will be prompted with a password field only. For WPA/WPA2 Enterprise, you will be prompted with further information relevant to your specific network setup. For more information, see the <a href="https://support.suitabletech.com/customer/en/portal/articles/2507438-wpa-wpa2-enterprise---802-1x-eap-configuration">WPA/WPA2 Enterprise - 802.1X/EAP Configuration</a> article in the Beam Help Center.</p>
+  </li>
+  <li>
+    <p>You should be all set! The next time you bring up the Beam SPS UI, you will be prompted with the Home Screen where you can make more changes to the device.</p>
+  </li>
+</ul>
+
+<h2 id="home-screen">Home Screen</h2>
+
+<p>The Home Screen of the Beam SPS UI will provide you the options listed below.</p>
+
+<p><img src="/img/beam-ui/2-1-HomeScreen.png" alt="HomeScreen1" /></p>
+
+<ul>
+  <li><strong>WiFi Setup:</strong> Lets you view, add and manage your WiFi network configurations.</li>
+  <li><strong>Options:</strong> Manage the network and system settings of your Beam.</li>
+  <li><strong>Tools:</strong> Helpful tools you can use on Beam.</li>
+  <li><strong>About:</strong> Information about your Beam.</li>
+</ul>
+
+<h2 id="wifi-setup">WiFi Setup</h2>
+
+<p>The WiFi Setup screen will help get your Beam connected to a WiFi network.</p>
+
+<p>Initially this screen will show a list of available networks within range of the Beam.  There is an option to limit available networks to a specific frequency band including “Both 2.4 GHz and 5GHz”, “2.4 GHz only”, “5 GHz only”, or to manually configure a network. <em>Note: Suitable Technologies ALWAYS recommends using a 5GHz network when available.</em></p>
+
+<ul>
+  <li>
+    <p>When prompted with a “Select a WiFi Network” screen, select the network you’d like to configure.</p>
+
+    <p><img src="/img/beam-ui/3-1-Wifi.png" alt="Wifi1" /></p>
+  </li>
+  <li>
+    <p>Depending on the type of WiFi network, different options may be displayed. See below for all available options</p>
+
+    <ul>
+      <li>
+        <p><strong>Open</strong></p>
+
+        <p><img src="/img/beam-ui/3-2-WiFiOpen.png" alt="Wifi2" /></p>
+
+        <ul>
+          <li><strong>SSID field:</strong> Name of WiFi Network you’d like to connect to.</li>
+          <li><strong>Enabled check box:</strong> Enable the Beam to use this network.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>WEP 40/128-bit</strong></p>
+
+        <ul>
+          <li><strong>SSID field:</strong> Name of WiFi Network you’d like to connect to.</li>
+          <li><strong>Enabled check box:</strong> Enable the Beam to use this network.</li>
+          <li><strong>Password:</strong> Password / key for WEP network.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>WPA or WPA2 Personal</strong></p>
+
+        <p><img src="/img/beam-ui/3-3-WiFiWPAPersonal.png" alt="Wifi3" /></p>
+
+        <ul>
+          <li><strong>SSID field:</strong> Name of WiFi Network you’d like to connect to.</li>
+          <li><strong>Enabled check box:</strong> Enable the Beam to use this network.</li>
+          <li><strong>Password:</strong> Password WPA network.</li>
+          <li><strong>Advanced Mode: Hit CTRL-SHIFT-A to reveal the options below.</strong></li>
+          <li><strong>WPA Version:</strong> Select those version that apply to your network from WPA and WPA2/RSN.</li>
+          <li><strong>Pairwise:</strong> Select the items that apply for your configuration from TKIP, AES/CCMP and NONE.</li>
+          <li><strong>Group:</strong> Select the items that apply for your configuration from TKIP, AES/CCMP, WEP40 and WEP104.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>WPA or WPA2 Enterprise</strong></p>
+
+        <p>If you need to import WiFi certificates from a USB flash drive, see the instructions to <a href="/beam-admin/usb-config/">configure Beam with a USB Flash Drive</a> and the <a href="https://support.suitabletech.com/customer/en/portal/articles/2507438-wpa-wpa2-enterprise---802-1x-eap-configuration">WPA/WPA2 Enterprise - 802.1X/EAP Configuration</a> Beam Help Center article for help.</p>
+
+        <p><strong>Please ensure that any certificates used are .PEM Base64 encoded with “—–Begin Certificate——” prefix and “—–END Certificate—–” suffix. Any certificates used/needed can be chained into a single .PEM file using OpenSSL if necessary.</strong></p>
+
+        <p><img src="/img/beam-ui/3-4-WiFiWPAEnterprise1.png" alt="Wifi4" /></p>
+
+        <p><img src="/img/beam-ui/3-5-WiFiWPAEnterprise2.png" alt="Wifi5" /></p>
+
+        <ul>
+          <li><strong>SSID field:</strong> Name of WiFi Network you’d like to connect to.</li>
+          <li><strong>Enabled check box:</strong> Enable the Beam to use this network.</li>
+          <li><strong>Authentication:</strong> Authentication protocol in use from TLS, Tunneled TLS or Protected EAP (PEAP).</li>
+          <li><strong>CA certificate:</strong> CA certificate which has been imported on Beam.</li>
+          <li><strong>Subject name of the certificate:</strong> Server certificate subject to match.</li>
+          <li><strong>Client certificate:</strong> Client certificate which has been imported on Beam.</li>
+          <li><strong>Private Key:</strong> Private key which has been imported on Beam.</li>
+          <li><strong>Private Key Password:</strong> Password for private key.</li>
+          <li><strong>Username/Identity:</strong> User name associated to certificate(s).</li>
+          <li><strong>WPA Version:</strong> Select those version that apply to your network from WPA and WPA2/RSN.</li>
+          <li><strong>Advanced Mode: Hit CTRL-SHIFT-A to reveal the options below.</strong></li>
+          <li><strong>Pairwise:</strong> Select the items that apply for your configuration from TKIP, AES/CCMP and NONE.</li>
+          <li><strong>Group:</strong> Select the items that apply for your configuration from TKIP, AES/CCMP, WEP40 and WEP104.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Captive Portal Network</strong></p>
+
+        <p>A Captive portal network is a network which prompts you to agree to terms or to enter a user name and password on a web-page prior to connection.</p>
+
+        <p>When connecting to a WiFi network with a captive portal page, you will need to tether a helper device (phone, tablet or laptop) to the Beam to browse and clear the captive portal.</p>
+
+        <p>On BeamPro and Beam Enhanced, this must be done via WiFi. For instructions, see the Beam Help Center article titled <a href="https://support.suitabletech.com/customer/portal/articles/2436745">“How do I clear a captive portal page on my BeamPro or Beam Enhanced?”</a></p>
+
+        <p>On Beam, this must be done via Bluetooth. For instructions, see the Beam Help Center article titled <a href="https://support.suitabletech.com/customer/en/portal/articles/2435820-how-do-i-clear-a-captive-portal-page-on-my-beam-via-bluetooth-">“How do I clear a captive portal page on my Beam via Bluetooth?”</a></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="options">Options</h2>
+
+<p>The options screen will help you manage the network and system settings of your Beam.</p>
+
+<p><img src="/img/beam-ui/4-1-Options.png" alt="Options1" /></p>
+
+<ul>
+  <li>
+    <p><strong>Network Options</strong></p>
+
+    <p>Manage all the Beam’s network settings from here. Represented in advanced mode below.</p>
+
+    <p><img src="/img/beam-ui/4-2-NetworkOptions.png" alt="NetworkOptions1" /></p>
+
+    <ul>
+      <li><strong>Frequency bands to use:</strong> The option to limit the networks available to this Beam to a specific frequency band.  Options are Both 2.4 GHz and 5GHz, 2.4 GHz only or 5 GHz only.</li>
+      <li><strong>Tier used for XXXX connections:</strong> Tiering used to influence how the Beam decides which interface to use. The Beam will try to use interfaces with lower-number tiers before interfaces with higher-number tiers.</li>
+      <li><strong>Scan type:</strong> Type of Scan used to discover access point. Available options are Active broadcast, Active directed or Passive. Active Broadcast requests any access point to respond. Active Directed is necessary for hidden SSIDs to work and would request specific access points to respond. Passive listens for periodic broadcasts from access points.</li>
+      <li><strong>Maximum TX power:</strong> Measured in dBm, this will set the maximum transmitting power when Beam is in connection sharing mode.</li>
+      <li><strong>Weak WiFi connection RSSI threshold:</strong> RSSI stands for Received Signal Strength Indication. This threshold will dictate when a WiFi connection is too weak and will cause lower tier connections to become preferred.</li>
+      <li><strong>Timeout for verifying an access point or network:</strong> Measured in seconds, this threshold will dicate the amount of time the Beam will attempt to verify network connectivity.</li>
+      <li><strong>Timeout for opening captive portal URL:</strong> Measured in seconds, this threshold will dictate how long the Beam tests for a captive portal WiFi connection. Networks which require you to agree to certain terms or enter login credentials on a webpage before you can access the internet through that network are known as captive portal networks.</li>
+      <li><strong>DHCP timeout:</strong> Measured in seconds, this threshold dictates how long the Beam will wait for a DHCP response before aborting its first connection attempt to a network. Subsequent connection attempts to the same network will double the timeout time used for that network each time.</li>
+      <li><strong>DHCP exponential backoff minimum:</strong> Measured in seconds, this threshold will dictate how long the DHCP client will wait when starting a connection attempt before retrying its request for the first time. Subsequent retries during a connection attempt will double the retry period.</li>
+      <li><strong>DHCP exponential backoff maximum:</strong> Measured in seconds, this threshold will dictate the maximum duration between any two DHCP retries during any connection attempt. Once the retry period for a connection attempt has reached this value, the retry period will remain the same for the remainder of that connection period.</li>
+      <li><strong>Hysteresis for changing AP on secondary interface when stationary:</strong> The Beam will only switch to a new access point when stationary if the desirability of the new access point is at least this many points greater.</li>
+      <li><strong>Hysteresis for changing AP on secondary interface when moving:</strong> The Beam will only switch to a new access point when moving if the desirability of the new access point is at least this many points greater.</li>
+      <li><strong>Scan width (2.4 GHz):</strong> Scan will detect access points within this many MHz of the scan frequency.</li>
+      <li><strong>Max BSS count:</strong> Maximum number of BSS entries the Beam will cache.</li>
+      <li><strong>Maximum allowed latency to relay:</strong> Measured in seconds, keep-alive packets that have a higher latency than this threshold are considered lost so the goodness of the network will be affected as well as necessitating a network interface restart.</li>
+      <li><strong>Ping rate for an idling interface:</strong> Measured in Hz, this is the ping rate used for an interface that is not being used for call data.</li>
+      <li><strong>Ping rate on a possibly dead interface:</strong> Measured in Hz, this is the ping rate used for an interface that is believed to be inoperable.</li>
+      <li><strong>Strong connection loss threshold during call:</strong> Measured as percentage, this threshold will dictate the loss below which a connection is considered to be strong when in a call or a keyboard is connected.</li>
+      <li><strong>Strong connection loss threshold when not in call:</strong> Measured as percentage, this threshold will dictate the loss below which a connection is considered to be strong when in a call or a keyboard is connected.</li>
+      <li><strong>Association timeout:</strong> Measured in seconds, this threshold dictates how long the Beam will attempt to connect to an access point.</li>
+      <li><strong>Fast re-authentication for WPA Enterprise:</strong> This option dictates whether the Beam will attempt to use the WPA enterprise fast re-authentication feature. When enabled, the Beam will attempt to reuse authentication when roaming. When disabled, the Beam will always go through the entire authentication process.</li>
+      <li><strong>Warn on AP country code consistency:</strong> This option dictates whether the Beam will warn when it detects an access point using frequencies incompatible with its noted enabled or unlikely country codes.</li>
+      <li><strong>Single Adapter WiFi Roaming:</strong> This option dictates whether the Beam will roam, or switch access points during a call when the device is only equipped with one WiFi interface.	When set to auto, the Beam will intelligently decide whether to roam or not. When on, the Beam will roam and when off, the Beam will avoid roaming during a call.</li>
+      <li><strong>Single Adapter WiFi Roaming Band Preference:</strong> This option dictates the whether the Beam will roam when it is on a lower-tier WiFi band. When set to auto, the Beam will intelligently decide whether to roam to improve WiFi band tier or not. When on, the Beam will roam to improve WiFi band tier and when off, the Beam will avoid roaming to improve WiFi band tier.</li>
+      <li><strong>Single Adapter Roaming Threshold:</strong> Measured in dBm, this threshold will dictate whether the Beam will try to connect to a new access point when in single adapter mode if its current access point falls below the noted</li>
+      <li><strong>Custom configuration servers:</strong> If your network prevents the Beam from reaching the default configuration server, you may provide the custom configuration server here by noting the IP “address:port.” This field is most commonly used by locations that employ an Internal Beam Relay. For myltiple entries, you can separate with a “space.”</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Sound Options</strong> Manage the Beam’s sound options.</p>
+
+    <p>Manage all the Beam’s sound settings from here</p>
+
+    <p><img src="/img/beam-ui/4-3-SoundOptions.png" alt="SoundOptions1" /></p>
+  </li>
+  <li>
+    <p><strong>System Language</strong></p>
+
+    <p>Set the language for the Beam here.</p>
+
+    <p><img src="/img/beam-ui/4-4-Language.png" alt="LanguageWizard1" /></p>
+  </li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+
+<p>The Tools section will provide you with helpful tools you can use on Beam. <em>Note: Beam™ and Beam™ Enhanced will give power options in this menu as the physical power button puts the device to sleep. BeamPro™ will not give these options as the power button powers the device on and off. See differences below.</em></p>
+
+<p><img src="/img/beam-ui/5-1-ToolsPro.png" alt="Tools1" /></p>
+
+<p><img src="/img/beam-ui/5-2-ToolsBeam.png" alt="Tools1" /></p>
+
+<ul>
+  <li>
+    <p><strong>Diagnostic Tools</strong></p>
+
+    <p>Tools used to diagnose connection problems on the Beam SPD.</p>
+
+    <p><img src="/img/beam-ui/5-3-DiagTools.png" alt="DiagTools1" /></p>
+
+    <ul>
+      <li><strong>DHCP Ping on wlan0:</strong> Measures the duration for DHCP to assign an IP address to wlan0.</li>
+      <li><strong>DHCP Ping on wlan1:</strong> Measures the duration for DHCP to assign an IP address to wlan1.</li>
+      <li><strong>Display connection statistics for wlan0:</strong> Show statistics such as network bandwidth and signal strength for wlan0.</li>
+      <li><strong>Display connection statistics for wlan1:</strong> Shows statistics such as network bandwidth and signal strength for wlan1.</li>
+      <li><strong>Run a STUN test:</strong> Tests the use if the STUN protocol on the network. This is necessary to make and receive Beam calls. If STUN is working well, all relays should return the same IP address and port number.</li>
+      <li><strong>Display available frequencies:</strong> Shows the WiFi frequencies and channels which are usable on this device.</li>
+      <li><strong>Monitor low-level WiFi stats:</strong> Shows detailed WiFi performance metrics.</li>
+      <li><strong>Display WiFi verification log:</strong> View the log of verification responses for all configured WiFi networks.</li>
+      <li><strong>Display system errors:</strong> Displays system errors which may prevent the Beam from functioning properly.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Factory Restore</strong></p>
+
+    <p>Erase all network credentials and restore settings to default values.</p>
+
+    <p><img src="/img/beam-ui/5-4-FactoryRestore.png" alt="FactoryRestore1" /></p>
+  </li>
+  <li>
+    <p><strong>Power</strong></p>
+
+    <p>Shut down and restart options for Beam.</p>
+  </li>
+</ul>
+
+<h2 id="about">About</h2>
+
+<p>Displays information about your Beam.</p>
+
+<p><img src="/img/beam-ui/6-1-About.png" alt="About1" /></p>
+
+<ul>
+  <li>
+    <p><strong>System Info</strong></p>
+
+    <p>Shows the system information for the Beam</p>
+
+    <p><img src="/img/beam-ui/6-2-SysInfo.png" alt="SystemInfo1" /></p>
+
+    <ul>
+      <li><strong>Device Name:</strong> Name applied to the device.</li>
+      <li><strong>Serial Number:</strong> Serial number of the device.</li>
+      <li><strong>WiFi # 1 MAC address:</strong> MAC address of first WiFi adapter.</li>
+      <li><strong>WiFi # 2 MAC address:</strong> MAC address of second WiFi adapter.</li>
+      <li><strong>Software Version:</strong> Version of software running on the device.</li>
+      <li><strong>Software Build Time:</strong> Build date of software running on the device.</li>
+      <li><strong>Last Server Update:</strong> Last reported time the device talked to Suitable Technologies’ infrastructure.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Open Source Licenses</strong></p>
+
+    <p>View the licenses associated with open source software in use.</p>
+
+    <p><img src="/img/beam-ui/6-3-Licenses.png" alt="Licenses1" /></p>
+  </li>
+</ul>
+
+
+<div class="tags">
+    
+</div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Suitable Technologies. All rights reserved.<br />
+<p>Page last updated:</span> March 9, 2017<br/> Site last generated: Sep 21, 2017<br />
+<p><img src="/img/SuitableLogo.png" alt="Suitable Technologies Logo" width="150" /></p>
+                </div>
+            </div>
+</footer>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+</body>
+
+</html>

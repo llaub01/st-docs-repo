@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" advanced, advanced beam manager, beam enhanced, beampro">
+<title>Advanced Beam Manager Guide  | </title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/modern-business.css">
+<link rel="stylesheet" href="/css/lavish-bootstrap.css">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005/feed.xml">
+
+
+
+
+ 
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://suitabletech.com"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a class="no_icon" href="">Documentation</a></li>
+                
+                
+                
+                <li><a href="https://support.suitabletech.com" target="_blank" class="no_icon">Help Center</a></li>
+                
+                
+                
+                <li><a href="https://suitabletech.com/manage" target="_blank" class="no_icon">Beam Manager</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Advanced Beam Manager Guide">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <!-- <li class="sidebarTitle">Beam Smart Presence Systems </li> -->
+    
+    
+    
+    
+    <li>
+    
+        
+        <a href="/">Overview</a>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Information and Requirements</a>
+        <ul>
+            
+            
+            
+            <li><a href="/product-info/">Beam Information and Requirements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/network/">Beam Network</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/safety-security/">Beam Safety and Security</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/4g/">Supported 4G Modems and Hotspots</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam User</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-user/">Getting Started as a Beam User</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-user/using-beam-app/">Using the Beam App FAQ</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam Administrator</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-admin/">Getting Started as a Beam Administrator</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/basic-beam/">Managing with the Basic Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/adv-beam/">Managing with the Advanced Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/usb-config/">Configure Beam with a USB Flash Drive</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/network-diagnostics/">Run Network Diagnostics from the Beam App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam User Guides</a>
+        <ul>
+            
+            
+            
+            <li><a href="/user-guides/">Beam User Guides</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/desktop-app/">Beam Desktop App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/mobile-app/">Beam Mobile App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/basic-beam-mgr/">Basic Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="/user-guides/adv-beam-mgr/">Advanced Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/beam-beampro-ui/">Beam and BeamPro SPS UI User Guide</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam How-To Videos</a>
+        <ul>
+            
+            
+            
+            <li><a href="/how-to-vids/">Beam How-To Videos</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Assembly Disassembly and Packaging</a>
+        <ul>
+            
+            
+            
+            <li><a href="/assembly-instr/">Beam Assembly Disassembly and Packaging</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Management API Documentation</a>
+        <ul>
+            
+            
+            
+            <li><a href="/api/">Beam Management API Documentation</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Advanced Beam Manager Guide</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+    
+
+    
+
+    
+
+  <h2 id="overview">Overview</h2>
+
+<p>The Advanced Beam Manager is used to manage Beam users and devices, schedule access and check activity within your Beam Organization. To manage users and devices, you must be a Beam Administrator for your organization.</p>
+
+<h2 id="logging-in-and-launching-the-beam-manager">Logging In and launching the Beam Manager</h2>
+
+<ul>
+  <li>
+    <p>Browse to <a href="https://suitabletech.com">suitabletech.com</a> and click “Login” in the top right corner.</p>
+
+    <p><img src="/img/adv-beam-mgr/1-1-LoginButton.jpg" alt="LoginButton" /></p>
+
+    <ul>
+      <li>
+        <p>Beam Authentication uses Suitable infrastructure to authenticate credentials.</p>
+
+        <p><img src="/img/adv-beam-mgr/1-2-SignInPage.png" alt="SignInPage" /></p>
+
+        <ol>
+          <li>
+            <p>Enter your email address and password in the fields provided</p>
+          </li>
+          <li>
+            <p>Select Sign In</p>
+          </li>
+          <li>
+            <p>Upon successful authentication, your Beam application will open to your Beam Lobby.</p>
+          </li>
+        </ol>
+      </li>
+      <li>Sign in with Google is only available to users with Gmail or Google for Business.
+        <ol>
+          <li>
+            <p>Click Sign in with Google</p>
+          </li>
+          <li>
+            <p>A new window will open to view your Google Accounts</p>
+          </li>
+          <li>
+            <p>Select the associated account to sign in</p>
+          </li>
+          <li>
+            <p>Upon successful authentication, your Beam application will open to your Beam Lobby</p>
+          </li>
+        </ol>
+      </li>
+      <li>Sign in with SSO is available to users who authenticate via SSO.
+        <ol>
+          <li>
+            <p>Click Sign in with SSO</p>
+          </li>
+          <li>
+            <p>A new browser window will open to the Suitable Technologies Welcome page</p>
+          </li>
+          <li>
+            <p>Upon successful authentication, your Beam application will open to your Beam Lobby</p>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Enter your Beam ID and password or click the “Sign in with Google” or “Sign in with SSO” button if you authenticate via another provider.</p>
+  </li>
+  <li>
+    <p>If this is the first time you’ve signed in, you will need to enter information about yourself and your Beam Organization</p>
+
+    <p><img src="/img/basic-beam-mgr/1-3-NewUser.png" alt="NewUser" /></p>
+  </li>
+  <li>
+    <p>Once logged in, click the button with your name in the top right corner to open the user menu and click “Beam Manager” or click on the “Beam Manager” button on your account home page.</p>
+
+    <p><img src="/img/basic-beam-mgr/1-4-AccountHome.png" alt="AccountHome" /></p>
+  </li>
+</ul>
+
+<h2 id="beam-manager-dashboard">Beam Manager Dashboard</h2>
+
+<p>The starting point for managing your Beams and Beam Users.</p>
+
+<p><em>Note: If you are an administrator for multiple organizations, you can choose the organization for which you want to make changes from a drop-down list in the upper-right corner of the aplication.</em></p>
+
+<ul>
+  <li>
+    <p>See the various tools available to Beam Administrators:</p>
+
+    <p><img src="/img/adv-beam-mgr/2-1-Dashboard.png" alt="Dashboard" /></p>
+
+    <ul>
+      <li>
+        <p><strong>Dashboard</strong> - Buttons for common activities as well as a list of recent Beam activity within the organization.</p>
+      </li>
+      <li>
+        <p><strong>Beams</strong> - Manage and configure Beams, Device Groups and set access and access times for these groups.</p>
+      </li>
+      <li>
+        <p><strong>Users</strong> - Manage and configure Users and User Groups.</p>
+      </li>
+      <li>
+        <p><strong>Activity</strong> - Monitor activity and run activity reports for Beam usage within an organization.</p>
+      </li>
+      <li>
+        <p><strong>Organization</strong> - Change settings of your Beam organization.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="inviting-a-new-beam-user">Inviting a New Beam User</h2>
+
+<p>Invite someone to use your Beams.</p>
+
+<p>See below for instructions to grant access to a new Beam User.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Invite a New User” button.</p>
+
+    <p><img src="/img/adv-beam-mgr/3-1-InviteUserButton.jpg" alt="InviteUserButton" /></p>
+  </li>
+  <li>
+    <p>Complete the “Invite a New User” form:</p>
+
+    <p><img src="/img/adv-beam-mgr/3-2-InviteUserBox.png" alt="InviteUserBox" /></p>
+
+    <ul>
+      <li>
+        <p>Enter an email address (required, must be a valid email address).</p>
+      </li>
+      <li>
+        <p>Enter first name (optional).</p>
+      </li>
+      <li>
+        <p>Enter last name (optional).</p>
+      </li>
+      <li>
+        <p>Select any user groups to which you’d like to add the user. (Optional, multiple selections allowed).</p>
+      </li>
+      <li>
+        <p>Select any device groups to which you’d like to add the user. (Optional, multiple selections allowed).</p>
+      </li>
+      <li>
+        <p>Select the “Email a copy to myself” option if you would like a copy of the invite email for your records. <em>Note: The password link in the copy of this message will be removed for security purposes.</em></p>
+      </li>
+      <li>
+        <p>Click “Invite User” button.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Invited users will be notified via email with the following information:</p>
+
+    <ul>
+      <li>
+        <p>Who invited them.</p>
+      </li>
+      <li>
+        <p>Which device groups/devices they can access.</p>
+      </li>
+      <li>
+        <p>Their user name.</p>
+      </li>
+      <li>
+        <p>A link to create a password and get the Beam application.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>After sending the invitation, the user will be added to your organization.</p>
+  </li>
+  <li>
+    <p>To change a Beam User’s profile image, locate the person whose profile image you want to edit, and click on their name.</p>
+
+    <p><img src="/img/adv-beam-mgr/3-3-UserProfileImage.png" alt="UserProfileImage" /></p>
+  </li>
+  <li>
+    <p>Hover your cursor over the current profile image to view the “Change image…” link. Highlight and click to proceed.</p>
+
+    <p><img src="/img/adv-beam-mgr/3-4-UserDetails.png" alt="UserDetails" /></p>
+  </li>
+  <li>
+    <p>Once clicked, a form appears, click on the “Choose file” button.</p>
+
+    <p><img src="/img/adv-beam-mgr/3-5-UserProfileImageUpload.png" alt="UserProfileImageUpload" /></p>
+  </li>
+  <li>
+    <p>A file browser window appears showing your system’s directory. Locate any .jpg, .png or gif file that is less than 2MB in size.</p>
+  </li>
+  <li>
+    <p>Click on the open button (lower right hand corner).</p>
+  </li>
+  <li>
+    <p>Your image will load into a cropping tool. Use the controls to select the area of the image you’d like to use.</p>
+
+    <p><img src="/img/adv-beam-mgr/3-6-UserProfileImageCrop.png" alt="UserProfileImageCrop" /></p>
+  </li>
+  <li>
+    <p>Once you’re happy with the results, click on the “Save” button.</p>
+  </li>
+</ul>
+
+<h2 id="granting-temporary-access">Granting Temporary Access</h2>
+
+<p>Invite someone to use your Beam(s) for a set period of time, temporarily.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Invite a Temporary User” button.</p>
+
+    <p><img src="/img/adv-beam-mgr/4-1-InviteTempUserButton.jpg" alt="InviteTempUserButton" /></p>
+  </li>
+  <li>
+    <p>Complete the “Invite a Temporary User” form:</p>
+
+    <p><img src="/img/adv-beam-mgr/4-2-InviteTempUserBox.png" alt="InviteTempUserBox" /></p>
+
+    <ul>
+      <li>Enter an email address (required, must be a valid email address)</li>
+      <li>Enter first name (optional)</li>
+      <li>Enter last name (optional)</li>
+      <li>Choose a device group that the user will have access to (required)</li>
+      <li>Enter a Starting Date (required)</li>
+      <li>Input an Ending Date (required)</li>
+      <li>Enter a Start Time (required)</li>
+      <li>Enter an End Time (required)</li>
+      <li>Choose whether the temporary user will “Require Session Answer”. <em>Note: This option requires someone local to the Beam to acknowledge the session request before initiating the session, helping to avoid accidental eavesdropping.</em></li>
+    </ul>
+  </li>
+  <li>
+    <p>Invited users will be notified via email with the following information:</p>
+
+    <ul>
+      <li>Who invited them.</li>
+      <li>Which device groups/devices they can access.</li>
+      <li>Access Times to each assigned device group.</li>
+      <li>Their user name.</li>
+      <li>A link to create a password and get the Beam application.</li>
+    </ul>
+  </li>
+  <li>
+    <p>After sending the invitation, the system will create a temporary access time during which the user can call Beams in the specified device group.</p>
+  </li>
+</ul>
+
+<h2 id="importing-beam-users-from-a-csv-file">Importing Beam Users From a CSV File</h2>
+
+<p>Invite a list of people to use your Beam(s).</p>
+
+<ul>
+  <li>
+    <p>Create a CSV file with one user per line in the following format:</p>
+
+    <p><code class="highlighter-rouge">email_address,first_name,last_name</code></p>
+  </li>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Import Users” button.</p>
+
+    <p><img src="/img/adv-beam-mgr/5-1-ImportUserButton.png" alt="ImportUsersButton" /></p>
+  </li>
+  <li>
+    <p>Click the “Choose File” button and browse to your CSV user file. <em>Note: You will have a chance to confirm the list of users and customize the invitation email in the next step.</em></p>
+
+    <p><img src="/img/adv-beam-mgr/5-2-ImportUserUpload.png" alt="ImportUsersUpload" /></p>
+  </li>
+  <li>
+    <p>Complete the “Import Users” form.</p>
+
+    <p><img src="/img/adv-beam-mgr/5-3-ImportUserForm.png" alt="ImportUsersForm" /></p>
+
+    <ul>
+      <li>New users are highlighted in green.</li>
+      <li>You may uncheck a user if you do not want to import them.</li>
+      <li>Existing users are highlighted in gray and will not be imported.</li>
+      <li>Users with errors are highlighted in red.</li>
+      <li>Select any user groups to which you’d like to add the users (optional, multiple selections allowed).</li>
+      <li>Select any device groups to which you’d like to add the users (optional, multiple selections allowed).</li>
+    </ul>
+  </li>
+  <li>
+    <p>Click the “Confirm” button.</p>
+  </li>
+  <li>
+    <p>Imported Users will be notified via email of the following:</p>
+
+    <ul>
+      <li>Who invited them.</li>
+      <li>Which device groups/devices they can access.</li>
+      <li>Their user name.</li>
+      <li>A link to create a password and get the Beam application.</li>
+    </ul>
+  </li>
+  <li>
+    <p>After sending the invitations, each new user will be added to your organization.</p>
+  </li>
+</ul>
+
+<h2 id="creating-and-adding-users-to-a-user-group">Creating and Adding Users to a User Group</h2>
+
+<p>Placing users in different groups allows the administrator to regulate access to a Beam or groups of Beams.</p>
+
+<p>See below for the steps to create and add users to a new Beam User Group.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Users” tab then click on the “Create New User Group” button at the upper right.</p>
+
+    <p><img src="/img/adv-beam-mgr/6-1-CreateUserGroup.jpg" alt="CreateUserGroup" /></p>
+  </li>
+  <li>
+    <p>Enter the user group’s name and select “Create User Group”.</p>
+  </li>
+  <li>
+    <p>Click the “Add Users” button in the upper left area, below the user group’s name.</p>
+
+    <p><img src="/img/adv-beam-mgr/6-2-UserGroupDetail.png" alt="UserGroupDetail" /></p>
+  </li>
+  <li>
+    <p>Complete the “Choose Users” form.</p>
+
+    <p><img src="/img/adv-beam-mgr/6-3-DeviceGroupChoose.png" alt="UserGroup3" /></p>
+  </li>
+  <li>
+    <p>Select users to add (required)</p>
+  </li>
+  <li>
+    <p>Click the “Add Selected Users” button when all users have been selected.</p>
+  </li>
+  <li>
+    <p>The new group will appear with other user groups at the top of the Users page.</p>
+  </li>
+  <li>
+    <p>To change a User Group’s profile image, click on the user group you’d like to edit.</p>
+  </li>
+  <li>
+    <p>Hover your cursor over the current profile image to view the “Change image…” link. Highlight and click to proceed.</p>
+
+    <p><img src="/img/adv-beam-mgr/6-4-UserGroupDetail.png" alt="UserGroup4" /></p>
+  </li>
+  <li>
+    <p>Click “Choose file…” and find the image you’d like to use.</p>
+  </li>
+  <li>
+    <p>Click “Open”.</p>
+  </li>
+  <li>
+    <p>Crop the image to your liking, then click “Save”.</p>
+  </li>
+</ul>
+
+<h2 id="linking-a-newly-acquired-beam">Linking a Newly Acquired Beam</h2>
+
+<p>See below for the steps to link a newly acquired Beam to your organization.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Add a Beam” Button.</p>
+
+    <p><img src="/img/adv-beam-mgr/7-1-AddNewBeam.png" alt="AddNewBeam" /></p>
+  </li>
+  <li>
+    <p>Complete the “Link a Beam with your account” form.</p>
+
+    <p><img src="/img/adv-beam-mgr/7-2-LinkBeam.png" alt="LinkBeam" /></p>
+
+    <ul>
+      <li>Choose a name for the new Beam</li>
+      <li>Enter the linking code on the Beam’s screen. <em>Note: If your Beam does not have a linking code, it may be linked to another organization or may have a connection issue.</em></li>
+      <li>Ensure the Beam organization to which you are linking the new Beam is correct</li>
+      <li>Click the “Link your Beam” button.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="managing-your-beam">Managing Your Beam</h2>
+
+<p>See below for the steps to configure your Beam.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Beams” tab, then select the Beam you’d like to manage from the Devices list.</p>
+
+    <p><img src="/img/adv-beam-mgr/8-1-BeamDetails.png" alt="BeamDetails" /></p>
+  </li>
+  <li>
+    <p>Click the “Edit” button.</p>
+  </li>
+  <li>
+    <p>Complete the “Edit Device” form.</p>
+
+    <p><img src="/img/adv-beam-mgr/8-2-EditBeamDetails.png" alt="EditBeamDetails" /></p>
+
+    <ul>
+      <li>Choose a name for the Beam. (required)</li>
+      <li>Set the location of the Beam. (optional)</li>
+      <li>List any labels for the Beam, i.e. “3rd Floor Conference Room” or “For Jim to Use”.</li>
+      <li>Select the Time Zone where the Beam is located (required).</li>
+      <li>Select whether you would like the Beam to be reservable or not. (required).</li>
+      <li>Select the desired device group of the Beam (required).</li>
+    </ul>
+  </li>
+  <li>
+    <p>Click the “Save Changes” button.</p>
+  </li>
+  <li>
+    <p>To change a Beam’s profile image, click the icon for the Beam you’d like to change.</p>
+  </li>
+  <li>
+    <p>Hover your cursor over the current profile image to view the “Change image…” link. Highlight and click to proceed.</p>
+  </li>
+  <li>
+    <p>Click “Choose file…” and find the image you’d like to use (.jpg, .gif or.png format).</p>
+  </li>
+  <li>
+    <p>Click “Open”.</p>
+  </li>
+  <li>
+    <p>Crop the image to your liking, then click “Save”.</p>
+  </li>
+</ul>
+
+<h2 id="creating-a-new-device-group">Creating a New Device Group</h2>
+
+<p>Placing Beams in different groups allows the administrator to regulate access to a Beam or groups of Beams in different departments or locations.</p>
+
+<p>See below for the steps to create and add Beams to a new device group.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Beams” tab then click on the “Create Device Group” button.</p>
+
+    <p><img src="/img/adv-beam-mgr/9-1-CreateDeviceGroup.jpg" alt="CreateDeviceGroup" /></p>
+  </li>
+  <li>
+    <p>Complete the “Create Device Group” form.</p>
+
+    <p><img src="/img/adv-beam-mgr/9-2-AddDevice.png" alt="AddDevice" /></p>
+
+    <ul>
+      <li>Choose a name for the new device group (required)</li>
+      <li>Select Beams to add to new device group. (optional) <em>Note: If a Beam already belongs to another Device Group, it will be removed from its old group.</em></li>
+    </ul>
+  </li>
+  <li>
+    <p>Click the “Create Device Group” button.</p>
+  </li>
+</ul>
+
+<h2 id="adding-individual-beam-users-to-a-device-group">Adding Individual Beam Users to a Device Group</h2>
+
+<p>Every one of your Beams lives in a device group. Device groups let you choose access times, manage permissions, and apply settings to one or more Beams at a time.</p>
+
+<p>To allow users to access Beams in a device group, you must add them to the group. You can add users individually or you can add entire user groups.</p>
+
+<p>See below for steps to add individual Beam Users to a device group:</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Beams” tab then click on the icon for the device group you’d like to change.</p>
+
+    <p><img src="/img/adv-beam-mgr/10-1-DeviceGroup.png" alt="DeviceGroup" /></p>
+  </li>
+  <li>
+    <p>Select the “Members” tab.</p>
+
+    <p><img src="/img/adv-beam-mgr/10-2-AddUsersDeviceGroup.png" alt="AddUsersDeviceGroup" /></p>
+  </li>
+  <li>
+    <p>Click on the “Add Users” button located in the top right hand corner of the screen.</p>
+
+    <p><img src="/img/adv-beam-mgr/10-3-DeviceGroupChoose.png" alt="DeviceGroupChoose" /></p>
+  </li>
+  <li>
+    <p>Choose the users you would like to add and click the “Add Selected Users” button.</p>
+  </li>
+</ul>
+
+<h2 id="adding-user-groups-to-a-device-group">Adding User Groups to a Device Group</h2>
+
+<p>To add user groups to a device group, follow the instructions above for adding individual members, but select one or more user groups in the “Choose Users” dialog. You can add both individual users and user groups at the same time.</p>
+
+<h2 id="access-times-for-a-device-group">Access Times for a Device Group</h2>
+
+<p>By default, device group members will have access to the Beams in the group 24 hours a day, seven days a week. If you’d like to change this, you can create more granular access times that restrict access during certain hours of the day.</p>
+
+<p>For each access time, the Session Answer feature can be turned on or off. When Session Answer is enabled, someone local to the Beam or a Beam Administrator must accept the session request before the session is initiated. This feature is similar to picking up a phone before talking and will avoid accidental eavesdropping.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Beams” tab then click on the icon for the device group you’d like to change.</p>
+  </li>
+  <li>
+    <p>Click “Access Times” tab.</p>
+
+    <p><img src="/img/adv-beam-mgr/11-1-AccessTime.png" alt="AccessTime" /></p>
+  </li>
+  <li>
+    <p>Access Time for All Members</p>
+
+    <p>You can create access times that will be shared by all members in the group (unless you specifically disable this behavior for specific members). By default, there is already a single access time for “All Members: All day, every day.” You can remove this access time and create more restrictive access times. If this entry exists, it will trump all other access times.</p>
+
+    <ul>
+      <li>
+        <p>Click “Add Access Time” button below “Access Times for All Members”</p>
+
+        <p><img src="/img/adv-beam-mgr/11-2-AccessTimeAllUsers.png" alt="AccessTimeAllUsers" /></p>
+
+        <ul>
+          <li>Select each day that group members have access to this device group.</li>
+          <li>Select time of day when all group members have access. You can pick either “All day” or a specific time range.</li>
+          <li>If you’d like to require users’ sessions to be answered by a local or an administrator during this time, select “Require Session Answer”.</li>
+          <li>You can add as many access times for all members as you like.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Editing Access Times for All members</p>
+
+        <ul>
+          <li>
+            <p>Click on the the access time description you wish to edit under “Access Times for All Members”.</p>
+          </li>
+          <li>
+            <p>Select each day that group members have access to this device group.</p>
+          </li>
+          <li>
+            <p>Select time of day all group members have access: Either “All day” or choose a time range.</p>
+          </li>
+          <li>
+            <p>If you’d like to require users’ sessions to be answered by a local or an administrator during this time, select “Require Session Answer”.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Access Times for Users or User Groups</p>
+
+    <p>You can set access times specific to a Beam User, Beam User Group or Temporary Beam User.</p>
+
+    <ul>
+      <li>
+        <p>Click on “Add Access Time” under the “Members” heading or by clicking on a member of the device group.</p>
+
+        <p><img src="/img/adv-beam-mgr/11-2-AccessTimeSpecificUser.png" alt="AccessTimeSpecificUser" /></p>
+      </li>
+      <li>
+        <p>Select the user or user group to which you’d like to apply this access time.</p>
+      </li>
+      <li>
+        <p>Select each day that the member should have access.</p>
+      </li>
+      <li>
+        <p>Select the time of day when the member should have access: Either “All day” or choose a time range.</p>
+      </li>
+      <li>
+        <p>If you’d like to require users’ sessions to be answered by a local or a Beam Administrator during this time, select “Require Session Answer”.</p>
+      </li>
+      <li>
+        <p>You can add as many access times for members as you like.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Adding or Editing Temporary Access Times</p>
+
+    <p>For instructions to invite a Temporary Beam User, see the heading titled “Granting Temporary Access.”</p>
+
+    <ul>
+      <li>
+        <p>You can edit existing temporary access times by clicking on them in the calendar or in the menu in the left column.</p>
+      </li>
+      <li>
+        <p>Select the user to which you’d like to apply this temporary access time.</p>
+      </li>
+      <li>
+        <p>Select the date and time when access should begin.</p>
+      </li>
+      <li>
+        <p>Select the date and time when access should end.</p>
+      </li>
+      <li>
+        <p>If you’d like to require the temporary user’s session to be answered by a local or an administrator during this time, select “Require Session Answer”.</p>
+      </li>
+      <li>
+        <p>You can create multiple temporary access times for a user, if needed.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="reserve-a-beam-from-device-group">Reserve a Beam from Device Group</h2>
+
+<p>See below for the steps to reserve a Beam for a specific user for a specific time.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Beams” tab, then select the Beam you’d like to reserve from the Device list. <em>Note: The Beam you would like to reserve must have reservations “Allowed” to perform the following steps. See the “Managing Your Beam” setcion above for more information.</em></p>
+
+    <p><img src="/img/adv-beam-mgr/12-1-Reservations.png" alt="Reservations" /></p>
+  </li>
+  <li>
+    <p>Click on the “Reserve a Beam” button.</p>
+  </li>
+  <li>
+    <p>Fill out the required information for the reservation</p>
+
+    <p><img src="/img/adv-beam-mgr/12-2-CreateReservation.png" alt="CreateReservation" /></p>
+
+    <ul>
+      <li>
+        <p>Select the Beam to be reserved. <em>Note: this Beam will be “Unavailable” to all other users during the reservation time.</em></p>
+      </li>
+      <li>
+        <p>Select the user who would like to reserve the Beam.</p>
+      </li>
+      <li>
+        <p>Choose a time when the reservation will start and the reservation will end.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="changing-device-group-settings">Changing Device Group Settings</h2>
+
+<p>See below for the steps to change the settings for a device group.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Beams” tab then click on the icon for the device group whose settings you’d like to change.</p>
+  </li>
+  <li>
+    <p>Click the “Settings” tab.</p>
+
+    <p><img src="/img/adv-beam-mgr/13-1-DeviceGroupSettings.png" alt="DeviceGroupSettings" /></p>
+  </li>
+  <li>
+    <p>Group Name</p>
+
+    <ul>
+      <li>Edit the name of the device group.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Device Group Administrators</p>
+
+    <ul>
+      <li>You can choose users to administer this device group. They won’t be able to change your organization’s settings or the settings of other device groups, but they will be able to invite and accept new users, change device group settings, and change settings for devices within this device group.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Setting Device Group Notifications</p>
+
+    <ul>
+      <li>
+        <p>Under “Notifications”, click the “Add User” button to choose which users will be notified if a Beam is left off the charger (optional)</p>
+      </li>
+      <li>
+        <p>Select “Also notify last pilot if a Beam is left off charger” if you’d like the last pilot to be notified as well (optional)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Setting Access Request URL</p>
+
+    <ul>
+      <li>Choose whether a URL and QR code are displayed on the Beam screen when not in use so users can request access.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Setting Who Can Answer Incoming Sessions</p>
+
+    <ul>
+      <li>Under “Session Answer”, click the “Add Users” button to choose which users can accept session requests for Beams in this group. <em>Note: Users with Session Answer privileges must be logged into the Beam Application to answer Beam sessions. Locals can always answer incoming sessions by tapping on the Beam when it is ringing.</em></li>
+    </ul>
+  </li>
+  <li>
+    <p>Setting Device Group Authentication</p>
+
+    <ul>
+      <li>
+        <p>Choose which authentication methods are required for accessing this device group.</p>
+
+        <ul>
+          <li><strong>All authentication methods</strong> - Allows for Suitable Technologies (username and password), Google authentication, or any future authentication methods that are added.</li>
+          <li><strong>Suitable Technologies</strong> - Allows only Suitable Technologies authentication (username and password) for this device group.</li>
+          <li><strong>Google</strong> - Allows only “Sign in with Google” authentication for this device group.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Change the Device Group Profile Image</p>
+  </li>
+  <li>
+    <p>Select Content to be Displayed on Beam Screen When Not In Use</p>
+
+    <ul>
+      <li>Put a logo or picture on the Beam screen when the device is docked and not in use. <em>Note: Image should be a high quality PNG, JPG or BMP file and should be in 4:3 aspect ration for BeamPro and 16:9 for Beam, otherwise image may appear distorted.</em></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="monitoring-beam-activity">Monitoring Beam Activity</h2>
+
+<p>See below for the steps to monitor Beam activity for an organization.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate and click the “Activity” tab.</p>
+  </li>
+  <li>
+    <p>Specify the date range and state of activity to monitor (In a call, Missed Calls, Offline, Configuring, or Upgrading)</p>
+
+    <p><img src="/img/adv-beam-mgr/14-1-Activity.png" alt="Activity" /></p>
+
+    <p>Each device with activity during the specified range will be listed.</p>
+  </li>
+  <li>
+    <p>Click on an event in the timeline to view its details.</p>
+  </li>
+  <li>
+    <p>Left click and drag to navigate along the timeline.</p>
+  </li>
+  <li>
+    <p>Zoom in or out of the timeline using your mouse wheel or by scrolling on your trackpad.</p>
+  </li>
+  <li>
+    <p>To do more in depth analysis of Beam usage, you can download a CSV file of the activity by clicking the “Export CSV” button.</p>
+  </li>
+</ul>
+
+<h2 id="beam-organization-settings">Beam Organization Settings</h2>
+
+<p>See below for how to change settings specific to your Beam Organization</p>
+
+<ul>
+  <li>
+    <p>Settings</p>
+
+    <p>If you’d like to change the details of your Beam Organization or change how users authenticate to your organization, check here.</p>
+
+    <p><img src="/img/adv-beam-mgr/15-1-OrganizationSettings.png" alt="OrganizationSettings" /></p>
+
+    <ul>
+      <li>
+        <p><strong>Organization Name</strong> - Change the name of your Beam Organization.</p>
+      </li>
+      <li>
+        <p><strong>Email Notifications</strong> - Change the name notification emails are sent from.</p>
+      </li>
+      <li>
+        <p><strong>Default Invite Message</strong> - Change the default invite message new Beam Users receive.</p>
+      </li>
+      <li>
+        <p><strong>Authenticate Users Via</strong> - Change the authentication method for your Beam Organization. For instructions on setting up SSO, check out the <a href="https://support.suitabletech.com/">Beam Help Center</a></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Authentication</p>
+
+    <p>If you’d like to change the way your users authenticate, check here.</p>
+
+    <p><img src="/img/adv-beam-mgr/15-2-OrganizationAuth.png" alt="OrganizationAuth" /></p>
+
+    <ul>
+      <li>
+        <p><strong>Authentication Method</strong> - Change the authentication method for your Beam Organization. For instructions on setting up SSO, check out the <a href="https://support.suitabletech.com/">Beam Help Center</a></p>
+      </li>
+      <li>
+        <p><strong>Domain Management</strong> - To support Single Sign-On (SSO) your organization must verify that it owns the domain associated with your users’ email accounts. You can do this via a DNS TXT entry or CNAME entry.</p>
+      </li>
+      <li>
+        <p><strong>API Keys</strong> - If you’d like to automate certain aspects of managing Beams in your organization, you can use the Beam Administration API. Check out the <a href="/api/">Beam Administration API</a> documentation. To access the API, you’ll need to create an API key for your organization.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Billing</p>
+
+    <p>If you’d like to see billing information for your Beam Organization, see here.</p>
+  </li>
+  <li>
+    <p>Device Support</p>
+
+    <p>If you’d like to see device support plans and expiration dates, see here.</p>
+  </li>
+</ul>
+
+
+<div class="tags">
+    
+</div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Suitable Technologies. All rights reserved.<br />
+<p>Page last updated:</span> August 21, 2017<br/> Site last generated: Sep 21, 2017<br />
+<p><img src="/img/SuitableLogo.png" alt="Suitable Technologies Logo" width="150" /></p>
+                </div>
+            </div>
+</footer>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+</body>
+
+</html>

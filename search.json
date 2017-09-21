@@ -1,0 +1,227 @@
+[
+
+
+
+
+{
+"title": "Supported 4G Modems for Beam",
+"tags": "",
+"keywords": "4g, dongle, USB",
+"url": "/product-info/4g/",
+"summary": ""
+},
+
+
+
+{
+"title": "Advanced Beam Manager Guide",
+"tags": "",
+"keywords": "advanced, advanced beam manager, beam enhanced, beampro",
+"url": "/user-guides/adv-beam-mgr/",
+"summary": ""
+},
+
+
+
+{
+"title": "Managing with the Advanced Beam Manager",
+"tags": "",
+"keywords": "manage, administrator",
+"url": "/beam-admin/adv-beam/",
+"summary": ""
+},
+
+
+
+{
+"title": "Basic Beam Manager Guide",
+"tags": "",
+"keywords": "basic beam manager, beam, beam standard, basic",
+"url": "/user-guides/basic-beam-mgr/",
+"summary": ""
+},
+
+
+
+{
+"title": "Managing with the Basic Beam Manager",
+"tags": "",
+"keywords": "manage, administrator",
+"url": "/beam-admin/basic-beam/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam and BeamPro SPS UI User Guide",
+"tags": "",
+"keywords": "setup, connection sharing, beam setup, wifi",
+"url": "/user-guides/beam-beampro-ui/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam Desktop App User Guide",
+"tags": "",
+"keywords": "beam app, windows, mac, osx, pc, pilot app, client",
+"url": "/user-guides/desktop-app/",
+"summary": ""
+},
+
+
+
+
+
+{
+"title": "Beam How-to Videos",
+"tags": "",
+"keywords": "videos, how-to, how to, vids",
+"url": "/how-to-vids/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam Product Information and Requirements",
+"tags": "",
+"keywords": "brochure, dimensions, compare, comparison, requirements,",
+"url": "/product-info/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam User Guides",
+"tags": "",
+"keywords": "user guide, instruction manual, manual, guide",
+"url": "/user-guides/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam Assembly, Disassembly, and Packing",
+"tags": "",
+"keywords": "assembly, disassembly, package, packing, setup, box",
+"url": "/assembly-instr/",
+"summary": ""
+},
+
+
+
+{
+"title": "Getting Started as a Beam User",
+"tags": "",
+"keywords": "user, pilot, setup, first use",
+"url": "/beam-user/",
+"summary": ""
+},
+
+
+
+{
+"title": "Getting Started as a Beam Administrator",
+"tags": "",
+"keywords": "manage, administrator",
+"url": "/beam-admin/",
+"summary": ""
+},
+
+
+
+{
+"title": "Documentation",
+"tags": "",
+"keywords": "",
+"url": "/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam Mobile App User Guide",
+"tags": "",
+"keywords": "mobile app, android, ios, tablet, phone",
+"url": "/user-guides/mobile-app/",
+"summary": ""
+},
+
+
+
+{
+"title": "Run Network Diagnostics from the Beam App",
+"tags": "",
+"keywords": "diagnostics, diagnostic, wifi, network",
+"url": "/beam-admin/network-diagnostics/",
+"summary": ""
+},
+
+
+
+{
+"title": "Network Setup and Administration",
+"tags": "",
+"keywords": "network, relays, internal relay, network admin guide, administrator, security, encryption",
+"url": "/product-info/network/",
+"summary": ""
+},
+
+
+
+{
+"title": "Beam Safety and Security",
+"tags": "",
+"keywords": "safety, security, encryption, damage, ad, assisted driving",
+"url": "/product-info/safety-security/",
+"summary": ""
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "Configure Beam with a USB Flash Drive",
+"tags": "",
+"keywords": "USB, certificate, certs, pem, enterprise",
+"url": "/beam-admin/usb-config/",
+"summary": ""
+},
+
+
+
+{
+"title": "Guides for Beam Users",
+"tags": "",
+"keywords": "",
+"url": "/users/",
+"summary": ""
+},
+
+
+
+{
+"title": "Using the Beam App",
+"tags": "",
+"keywords": "pilot, software, call, install, app, camera, audio",
+"url": "/beam-user/using-beam-app/",
+"summary": ""
+}
+
+
+]

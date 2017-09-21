@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" basic beam manager, beam, beam standard, basic">
+<title>Basic Beam Manager Guide  | </title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/modern-business.css">
+<link rel="stylesheet" href="/css/lavish-bootstrap.css">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005/feed.xml">
+
+
+
+
+ 
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://suitabletech.com"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a class="no_icon" href="">Documentation</a></li>
+                
+                
+                
+                <li><a href="https://support.suitabletech.com" target="_blank" class="no_icon">Help Center</a></li>
+                
+                
+                
+                <li><a href="https://suitabletech.com/manage" target="_blank" class="no_icon">Beam Manager</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Basic Beam Manager Guide">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <!-- <li class="sidebarTitle">Beam Smart Presence Systems </li> -->
+    
+    
+    
+    
+    <li>
+    
+        
+        <a href="/">Overview</a>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Information and Requirements</a>
+        <ul>
+            
+            
+            
+            <li><a href="/product-info/">Beam Information and Requirements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/network/">Beam Network</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/safety-security/">Beam Safety and Security</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/4g/">Supported 4G Modems and Hotspots</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam User</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-user/">Getting Started as a Beam User</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-user/using-beam-app/">Using the Beam App FAQ</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam Administrator</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-admin/">Getting Started as a Beam Administrator</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/basic-beam/">Managing with the Basic Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/adv-beam/">Managing with the Advanced Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/usb-config/">Configure Beam with a USB Flash Drive</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/network-diagnostics/">Run Network Diagnostics from the Beam App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam User Guides</a>
+        <ul>
+            
+            
+            
+            <li><a href="/user-guides/">Beam User Guides</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/desktop-app/">Beam Desktop App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/mobile-app/">Beam Mobile App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="/user-guides/basic-beam-mgr/">Basic Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/adv-beam-mgr/">Advanced Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/beam-beampro-ui/">Beam and BeamPro SPS UI User Guide</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam How-To Videos</a>
+        <ul>
+            
+            
+            
+            <li><a href="/how-to-vids/">Beam How-To Videos</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Assembly Disassembly and Packaging</a>
+        <ul>
+            
+            
+            
+            <li><a href="/assembly-instr/">Beam Assembly Disassembly and Packaging</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Management API Documentation</a>
+        <ul>
+            
+            
+            
+            <li><a href="/api/">Beam Management API Documentation</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Basic Beam Manager Guide</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+    
+
+    
+
+    
+
+  <h2 id="overview">Overview</h2>
+
+<p>The Basic Beam Manager is used to manage Beam users and devices within your Beam Organization. To manage users and devices, you must be a Beam Administrator or have “can manage” access for your organization.</p>
+
+<h2 id="logging-in-and-launching-the-beam-manager">Logging In and Launching the Beam Manager</h2>
+
+<ul>
+  <li>
+    <p>Browse to <a href="https://suitabletech.com">suitabletech.com</a> and click “Login” in the top right corner.</p>
+
+    <p><img src="/img/adv-beam-mgr/1-1-LoginButton.jpg" alt="LoginButton" /></p>
+  </li>
+  <li>
+    <p>Enter your Beam ID and password or click the “Sign in with Google” or “Sign in with SSO” button if you authenticate via another provider.</p>
+
+    <p><img src="/img/basic-beam-mgr/1-2-SignInPage.png" alt="SignIn" /></p>
+
+    <ul>
+      <li>
+        <p>Beam Authentication uses Suitable infrastructure to authenticate credentials.</p>
+
+        <ol>
+          <li>
+            <p>Enter your email address and password in the fields provided</p>
+          </li>
+          <li>
+            <p>Select Sign In</p>
+          </li>
+          <li>
+            <p>Upon successful authentication, your Beam application will open to your Beam Lobby.</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Sign in with Google is only available to users with Gmail or Google for Business.</p>
+
+        <ol>
+          <li>
+            <p>Click Sign in with Google</p>
+          </li>
+          <li>
+            <p>A new window will open to view your Google Accounts</p>
+          </li>
+          <li>
+            <p>Select the associated account to sign in</p>
+          </li>
+          <li>
+            <p>Upon successful authentication, your Beam application will open to your Beam Lobby</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Sign in with SSO is available to users who authenticate via SSO.</p>
+
+        <ol>
+          <li>
+            <p>Click Sign in with SSO</p>
+          </li>
+          <li>
+            <p>A new browser window will open to the Suitable Technologies Welcome page</p>
+          </li>
+          <li>
+            <p>Upon successful authentication, your Beam application will open to your Beam Lobby</p>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>If this is the first time you’ve signed in, you will need to enter information about yourself and your Beam Organization</p>
+
+    <p><img src="/img/basic-beam-mgr/1-3-NewUser.png" alt="NewUser" /></p>
+  </li>
+  <li>
+    <p>Once logged in, click the button with your name in the top right corner to open the user menu and click “Beam Manager” or click on the “Beam Manager” button on your account home page.</p>
+
+    <p><img src="/img/basic-beam-mgr/1-4-AccountHome.png" alt="AccountHome" /></p>
+  </li>
+</ul>
+
+<h2 id="beam-manager-dashboard">Beam Manager Dashboard</h2>
+
+<p>The starting point for managing your Beams and Beam Users.</p>
+
+<p><em>Note: If you are an administrator for multiple organizations, you can choose the organization for which you want to make changes from a drop-down list in the upper-right corner of the application.</em></p>
+
+<p><img src="/img/basic-beam-mgr/2-1-Dashboard.png" alt="Dashboard" /></p>
+
+<ul>
+  <li>
+    <p>See the links to various tools available to Beam Administrators.</p>
+
+    <ul>
+      <li>
+        <p><strong>Download Beam Desktop App:</strong> Download the latest version of the Beam desktop application</p>
+      </li>
+      <li>
+        <p><strong>Get Help:</strong> Visit the Beam Support Site</p>
+      </li>
+      <li>
+        <p><strong>Add a Beam:</strong> Link a new Beam to your Account</p>
+      </li>
+      <li>
+        <p><strong>View Documentation:</strong> Visit the Beam instructions and documentation site</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="inviting-a-new-beam-user">Inviting a New Beam User</h2>
+
+<p>Invite someone to use your Beam.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Manager dashboard, locate the Beam you want to invite a Beam User to use.</p>
+
+    <p><img src="/img/basic-beam-mgr/3-1-InviteUser.png" alt="InviteUser" /></p>
+  </li>
+  <li>
+    <p>Locate the invitation form and add your contact’s email address</p>
+
+    <p><img src="/img/basic-beam-mgr/3-2-InviteEmail.jpg" alt="InviteEmail" /></p>
+  </li>
+  <li>
+    <p>Click “Add User” to complete the invitation.</p>
+  </li>
+  <li>
+    <p>Invited users will be notified via email with the following information:</p>
+
+    <ul>
+      <li>
+        <p>Who invited them.</p>
+      </li>
+      <li>
+        <p>Which device groups/devices they can access.</p>
+      </li>
+      <li>
+        <p>Their user name.</p>
+      </li>
+      <li>
+        <p>A link to create a password and get the Beam application.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>After sending the invitation, the user will be added to your organization.</p>
+  </li>
+</ul>
+
+<h2 id="customizing-a-beam-users-profile-image">Customizing a Beam User’s Profile Image</h2>
+
+<p>To change a Beam User’s profile image, see the steps below.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Management Page, make sure the “Manage Access” tab is in focus.</p>
+
+    <p><img src="/img/basic-beam-mgr/5-1-BeamDetails.png" alt="BeamDetails" /></p>
+  </li>
+  <li>
+    <p>Locate the person whose profile image you want to edit, and click it.</p>
+
+    <p><img src="/img/basic-beam-mgr/5-2-UserInfo.png" alt="UserInfo" /></p>
+  </li>
+  <li>
+    <p>Hover your cursor over the current profile image to view the “Change image…” link. Highlight and click to proceed.</p>
+
+    <p><img src="/img/basic-beam-mgr/5-3-UserDetail.png" alt="UserDetail" /></p>
+  </li>
+  <li>
+    <p>Once clicked, a form appears, click on the “Choose file” button.</p>
+
+    <p><img src="/img/basic-beam-mgr/5-4-ProfileImageUpload.jpg" alt="ProfileImageUpload" /></p>
+  </li>
+  <li>
+    <p>A file browser window appears showing your system’s directory. Locate any .jpg, .png or gif file that is less than 2MB in size.</p>
+  </li>
+  <li>
+    <p>Click on the open button (lower right hand corner).</p>
+  </li>
+  <li>
+    <p>Your image will load into a cropping tool. Use the controls to select the area of the image you’d like to use.</p>
+
+    <p><img src="/img/basic-beam-mgr/5-5-UserProfileImage.png" alt="UserProfileImage" /></p>
+  </li>
+  <li>
+    <p>Once you’re happy with the results, click on the “Save” button.</p>
+  </li>
+</ul>
+
+<h2 id="managing-your-beam">Managing Your Beam</h2>
+
+<p>See below for the steps to edit your Beam’s Details:</p>
+
+<ul>
+  <li>
+    <p>From the Beam Information Page, click the “Manage” button below the Beam Info Section.</p>
+
+    <p><img src="/img/basic-beam-mgr/6-1-Dashboard.png" alt="Dashboard" /></p>
+  </li>
+  <li>
+    <p>Once clicked, you’ll be taken to the Beam’s management page.</p>
+
+    <p><img src="/img/basic-beam-mgr/6-2-BeamDetails.png" alt="BeamDetails" /></p>
+  </li>
+  <li>
+    <p>By default, anyone you invite to call your Beam will need to have that call answered by someone near the Beam or a Beam Administrator. If you would like, you can give a person the ability to automatically connect to your Beam, without the need for the call to be answered. Locate the “Auto-connect” column and put a check mark in the field</p>
+
+    <p><img src="/img/basic-beam-mgr/6-3-ManageAccess.png" alt="ManageAccess" /></p>
+  </li>
+  <li>
+    <p>If you want to allow others to manage your Beam, put a checkmark in the “Can manage” column.</p>
+  </li>
+  <li>
+    <p>To remove a user, locate the person who you wish to remove in the list and click on the “Remove Person” button to the far right.</p>
+  </li>
+  <li>
+    <p>To view recent activity on a Beam, click on the “View Activity” tab.</p>
+
+    <p><img src="/img/basic-beam-mgr/6-4-Activity.png" alt="Activity" /></p>
+  </li>
+  <li>
+    <p>To edit your Beam’s details, click on the Edit Details Button from the Beam Management page.</p>
+  </li>
+  <li>
+    <p>Once clicked, a form will appear with entries for each detail that can be modified.</p>
+
+    <p><img src="/img/basic-beam-mgr/6-5-EditDetails.png" alt="EditDetails" /></p>
+
+    <ul>
+      <li>
+        <p><strong>Beam Name:</strong> Set the Name of your Beam. This name is visible on the Beam App, and in the Beam Management Tool. This is a required field and cannot be left blank.</p>
+      </li>
+      <li>
+        <p><strong>Location:</strong> A brief description of the Beam’s location. “New York, NY” or “Bill’s House” for example.</p>
+      </li>
+      <li>
+        <p><strong>Labels:</strong> Labels (or tags) are short single word descriptions that help make the Beam easier to search. E.g. “Bill”, “Personal”, “Upstairs”, etc.</p>
+      </li>
+      <li>
+        <p><strong>Time Zone:</strong> Locate the nearest city to your Beam’s location to set the correct local time for it.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Once you are happy with your changes, click on the Save Changes button, you can also revert any changes you’ve made by clicking on the cancel button.</p>
+  </li>
+</ul>
+
+<p><em>Note: In the event you need to unlink a Beam from your organization (perhaps to sell it to another party), click on the “Unlink this Device…” button and confirm the removal.</em></p>
+
+<ul>
+  <li>
+    <p>Click on the “Advanced” Button to display information unique to this Beam like MAC address or serial number or to remotely restart or shut down the Beam.</p>
+
+    <p><img src="/img/basic-beam-mgr/6-6-AdvancedInfo.png" alt="AdvancedInfo" /></p>
+
+    <p><img src="/img/basic-beam-mgr/6-7-AdvancedSettings.png" alt="AdvancedSettings" /></p>
+  </li>
+</ul>
+
+<h2 id="changing-your-beams-profile-image">Changing Your Beam’s Profile Image</h2>
+
+<p>See below for the steps to change the profile image of your Beam:</p>
+
+<ul>
+  <li>
+    <p>From the Beam Management page, hover your cursor over the current profile image to view the “Change image…” link. Highlight and click to proceed.
+  <img src="/img/basic-beam-mgr/7-1-BeamDetails.png" alt="BeamDetails" /></p>
+  </li>
+  <li>
+    <p>Once clicked, a form appears, click on the “Choose file” button.</p>
+
+    <p><img src="/img/basic-beam-mgr/7-2-ProfileImageUpload.jpg" alt="ProfileImageUpload" /></p>
+  </li>
+  <li>
+    <p>A file browser window appears showing your system’s directory, locate any .jpg, .png or gif file that is less than 2MB in size.</p>
+  </li>
+  <li>
+    <p>Click on the open button (lower right hand corner)</p>
+  </li>
+  <li>
+    <p>Your image will load into a cropping tool. Use the controls to choose which section of the image to use.</p>
+
+    <p><img src="/img/basic-beam-mgr/7-3-BeamProfileImage.jpg" alt="BeamProfileImage" /></p>
+  </li>
+  <li>
+    <p>Once you’re happy with the results, click on the “Save” button.</p>
+  </li>
+</ul>
+
+<h2 id="adding-another-beam-to-your-organization">Adding Another Beam to Your Organization</h2>
+
+<p>Follow the instructions below to link a newly acquired Beam to your existing Beam organization.</p>
+
+<ul>
+  <li>
+    <p>From the Beam Management Tool Main Menu, locate and select the “Add a Beam” button.</p>
+
+    <p><img src="/img/basic-beam-mgr/8-1-AddBeamButton.jpg" alt="AddBeamButton" /></p>
+  </li>
+  <li>
+    <p>Once clicked, a form appears. Locate and input the Linking Code that appears on the Beam you want to add to your account.</p>
+
+    <p><img src="/img/basic-beam-mgr/8-2-LinkBeam.png" alt="LinkBeam" /></p>
+  </li>
+  <li>
+    <p>Click on “Link your Beam” to complete the process.</p>
+  </li>
+</ul>
+
+<h2 id="organization-settings">Organization Settings</h2>
+
+<p>To change the details about your Beam Organization, see below.</p>
+
+<ul>
+  <li>
+    <p>Locate and click on the gear icon in the upper right of the Beam Manager page.</p>
+
+    <p><img src="/img/basic-beam-mgr/9-1-OrgSettings.png" alt="OrgSettings" /></p>
+  </li>
+</ul>
+
+
+<div class="tags">
+    
+</div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Suitable Technologies. All rights reserved.<br />
+<p>Page last updated:</span> April 5, 2017<br/> Site last generated: Sep 21, 2017<br />
+<p><img src="/img/SuitableLogo.png" alt="Suitable Technologies Logo" width="150" /></p>
+                </div>
+            </div>
+</footer>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+</body>
+
+</html>

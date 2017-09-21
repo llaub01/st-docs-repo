@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" USB, certificate, certs, pem, enterprise">
+<title>Configure Beam with a USB Flash Drive  | </title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/modern-business.css">
+<link rel="stylesheet" href="/css/lavish-bootstrap.css">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005/feed.xml">
+
+
+
+
+ 
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://suitabletech.com"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a class="no_icon" href="">Documentation</a></li>
+                
+                
+                
+                <li><a href="https://support.suitabletech.com" target="_blank" class="no_icon">Help Center</a></li>
+                
+                
+                
+                <li><a href="https://suitabletech.com/manage" target="_blank" class="no_icon">Beam Manager</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Configure Beam with a USB Flash Drive">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <!-- <li class="sidebarTitle">Beam Smart Presence Systems </li> -->
+    
+    
+    
+    
+    <li>
+    
+        
+        <a href="/">Overview</a>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Information and Requirements</a>
+        <ul>
+            
+            
+            
+            <li><a href="/product-info/">Beam Information and Requirements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/network/">Beam Network</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/safety-security/">Beam Safety and Security</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/4g/">Supported 4G Modems and Hotspots</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam User</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-user/">Getting Started as a Beam User</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-user/using-beam-app/">Using the Beam App FAQ</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam Administrator</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-admin/">Getting Started as a Beam Administrator</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/basic-beam/">Managing with the Basic Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/adv-beam/">Managing with the Advanced Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="/beam-admin/usb-config/">Configure Beam with a USB Flash Drive</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/network-diagnostics/">Run Network Diagnostics from the Beam App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam User Guides</a>
+        <ul>
+            
+            
+            
+            <li><a href="/user-guides/">Beam User Guides</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/desktop-app/">Beam Desktop App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/mobile-app/">Beam Mobile App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/basic-beam-mgr/">Basic Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/adv-beam-mgr/">Advanced Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/beam-beampro-ui/">Beam and BeamPro SPS UI User Guide</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam How-To Videos</a>
+        <ul>
+            
+            
+            
+            <li><a href="/how-to-vids/">Beam How-To Videos</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Assembly Disassembly and Packaging</a>
+        <ul>
+            
+            
+            
+            <li><a href="/assembly-instr/">Beam Assembly Disassembly and Packaging</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Management API Documentation</a>
+        <ul>
+            
+            
+            
+            <li><a href="/api/">Beam Management API Documentation</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Configure Beam with a USB Flash Drive</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+    
+
+    
+
+    
+
+  <h2 id="overview">Overview</h2>
+
+<p>In addition to using a keyboard to configure a Beam, it is also possible to do so by plugging in a USB flash drive using the following instructions. This process will import WiFi certificates and a configuration file to the Beam.</p>
+
+<p><strong>Please ensure that any certificates used are .PEM (Base64) encoded with “—–Begin Certificate——” prefix and an “—–END Certificate—–” suffix. Any certificates used/needed can be chained into a single .PEM file using OpenSSL if necessary.</strong></p>
+
+<p>Since BeamPro only has one USB port, configuration by USB drive does not require a keyboard.</p>
+
+<p>Currently, you can do the following with a USB drive:</p>
+
+<ul>
+  <li>Reset a device to factory defaults</li>
+  <li>Delete all the Wi-Fi networks from the device’s configuration</li>
+  <li>Add Wi-Fi networks to the device’s configuration</li>
+  <li>Delete all the keys and certificates (for WPA Enterprise) from the device</li>
+  <li>Add keys or certificates to the device</li>
+  <li>Set device parameters</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+
+<ol>
+  <li>Write your <code class="highlighter-rouge">configure.yaml</code> file based on the examples and documentation below and put it on your USB drive</li>
+  <li>Copy any WPA enterprise keys necessary onto your USB drive</li>
+  <li>Plug in your USB drive as set up in the previous two steps into your Beam device</li>
+  <li>Follow the instructions that appear on the screen</li>
+</ol>
+
+<h2 id="usb-drive-layout">USB Drive Layout</h2>
+
+<p>The Beam device will look for the following files on your drive:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">beam/configure.yaml</code>: Commands for all Beam devices.</li>
+  <li><code class="highlighter-rouge">beam/wifi_keys/...</code>: Keys/certificates to be copied onto all Beam devices.</li>
+  <li><code class="highlighter-rouge">beam/beam_{wifi_serial_number}/configure.yaml</code>: Commands for Beam device with serial number <code class="highlighter-rouge">wifi_serial_number</code> (will override <code class="highlighter-rouge">beam/configure.yaml</code> commands).</li>
+  <li><code class="highlighter-rouge">beam/beam_{wifi_serial_number}/wifi_keys/...</code>: Keys/certificates to be copied onto Beam device with serial number <code class="highlighter-rouge">wifi_serial_number</code>.</li>
+</ul>
+
+<h2 id="sample-configureyaml-files">Sample configure.yaml files</h2>
+
+<p>The configuration file should consist of a YAML list of commands. Here are a few sample <code class="highlighter-rouge">configure.yaml</code> files for different network configurations. The options are the same as those of <code class="highlighter-rouge">wpa_supplicant</code>, for which an example configuration file explaining all of the settings can be found <a href="http://hostap.epitest.fi/gitweb/gitweb.cgi?p=hostap.git;a=blob_plain;f=wpa_supplicant/wpa_supplicant.conf">here</a>.</p>
+
+<h4 id="wpa2-personal">WPA2 Personal</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>add_networks:
+- ssid: wpa2
+  group: CCMP
+  key_mgmt: WPA-PSK
+  pairwise: CCMP
+  proto: RSN
+  psk: "securepassword"
+</code></pre>
+</div>
+
+<h4 id="wpa-personal">WPA Personal</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>add_networks:
+- ssid: wpa
+  group: TKIP
+  key_mgmt: WPA-PSK
+  pairwise: TKIP
+  proto: WPA
+  psk: "securepassword"
+</code></pre>
+</div>
+
+<h4 id="open">Open</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>add_networks:
+- ssid: open
+  key_mgmt: NONE
+</code></pre>
+</div>
+
+<h4 id="wpa-enterprise">WPA Enterprise</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Deleting the keys on the Beam device happens before copying the keys on the USB drive
+delete_all_wifi_keys:
+# Deleting all the networks happens before any networks are added
+delete_all_networks:
+# The following is a sample PEAP MSCHAPV2 network
+add_networks:
+- ssid: wpaeap
+  group: TKIP
+  identity: test
+  key_mgmt: WPA-EAP
+  pairwise: CCMP TKIP
+  password: "12345"
+  phase2: auth=MSCHAPV2
+  proto: WPA RSN
+  eap: PEAP
+  # ca.crt needs to exist in either the beam/wifi_keys/ 
+  # or beam/beam_&lt;wifi_serial_numer&gt;/wifi_keys/ directories
+  # or have previously been copied to the Beam device
+  ca_cert: ca.crt
+  # If you don't specify a ca_cert file, you MUST specify 
+  # confirm_no_ca_cert. We recommend that you don't do
+  # this since it is insecure.
+  # private_key:
+  # client_cert:
+  # confirm_no_ca_cert: true
+  # If you provide an encrypted private key here 
+  # (private_key:), you will have to plug in a keyboard 
+  # afterwards to enter the password and decrypt it
+</code></pre>
+</div>
+
+<h4 id="setting-parameters">Setting parameters</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>set_parameters:
+  # int/float/duration params
+  dhcp_exp_backoff_max: 3
+  max_txpower: 25
+  captive_portal_timeout: 5.5
+  # multiple choice params
+  disabled_frequencies: [2412, 2422]
+  # Choice params (use left hand value in available options below)
+  single_adapter_roaming: on
+  wired_tier: 2
+</code></pre>
+</div>
+
+<h2 id="available-commands">Available Commands</h2>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">restore_factory_defaults</code> (no arguments): restores factory defaults. The device will restart when the USB stick has been removed.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">delete_all_wifi_keys</code> (no arguments): Deletes all the wireless keys on
+the Beam device before copying in new ones.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">delete_all_networks</code> (no arguments): Removes all networks. Applies before
+add_networks.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">add_networks</code> (network list argument): Adds networks to the currently
+configured list of networks, replacing existing networks with the
+same name.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">set_parameters</code> (key value pair argument): Sets device parameters.</p>
+  </li>
+</ul>
+
+<h2 id="parameters-available">Parameters available</h2>
+<ul>
+<li>bss_max_count - Maximum BSS count (type: int) (Min: 1) (Max: 8192)
+<li>fast_reauth - Fast re-authentication for WPA Enterprise (type: choice)<br />
+Options <a onclick="$('#fast_reauth').toggle();">(Show/Hide)</a>:<ul id="fast_reauth" style="display:none;">
+    <li>True - Enabled</li>
+    <li>False - Disabled</li>
+</ul>
+<li>dhcp_exp_backoff_max - DHCP retry period maximum (type: duration) (Min: 1) (Max: 240)
+<li>roaming_threshold_single_adapter - Single adapter roaming threshold (type: float) (Min: -100) (Max: 0)
+<li>dhcp_timeout - DHCP timeout (type: duration) (Min: 0.1) (Max: 120)
+<li>ping_rate_possibly_dead - Ping rate on a possibly dead interface (type: float) (Min: 0.1) (Max: 15)
+<li>strong_connection_loss_threshold_not_in_call - Strong connection loss threshold when not in call (type: float) (Min: 0) (Max: 1)
+<li>band - Frequency bands to use (type: choice)<br />
+Options <a onclick="$('#band').toggle();">(Show/Hide)</a>:<ul id="band" style="display:none;">
+    <li>3 - Both 2.4 GHz and 5 GHz</li>
+    <li>1 - 2.4 GHz only</li>
+    <li>2 - 5 GHz only</li>
+</ul>
+<li>ping_rate_low - Ping rate for an idling interface (type: float) (Min: 0.1) (Max: 5)
+<li>reassociate_hysteresis_stationary - Secondary interface hysteresis when stationary (type: float) (Min: 1) (Max: 100)
+<li>disabled_frequencies - Disabled frequencies (type: multiple choice)<br />
+Options <a onclick="$('#disabled_frequencies').toggle();">(Show/Hide)</a>:<ul id="disabled_frequencies" style="display:none;">
+    <li>2412 - 2412 MHz (ch 1)</li>
+    <li>2417 - 2417 MHz (ch 2)</li>
+    <li>2422 - 2422 MHz (ch 3)</li>
+    <li>2427 - 2427 MHz (ch 4)</li>
+    <li>2432 - 2432 MHz (ch 5)</li>
+    <li>2437 - 2437 MHz (ch 6)</li>
+    <li>2442 - 2442 MHz (ch 7)</li>
+    <li>2447 - 2447 MHz (ch 8)</li>
+    <li>2452 - 2452 MHz (ch 9)</li>
+    <li>2457 - 2457 MHz (ch 10)</li>
+    <li>2462 - 2462 MHz (ch 11)</li>
+    <li>2467 - 2467 MHz (ch 12)</li>
+    <li>2472 - 2472 MHz (ch 13)</li>
+    <li>5180 - 5180 MHz (ch 36)</li>
+    <li>5200 - 5200 MHz (ch 40)</li>
+    <li>5220 - 5220 MHz (ch 44)</li>
+    <li>5240 - 5240 MHz (ch 48)</li>
+    <li>5260 - 5260 MHz (ch 52)</li>
+    <li>5280 - 5280 MHz (ch 56)</li>
+    <li>5300 - 5300 MHz (ch 60)</li>
+    <li>5320 - 5320 MHz (ch 64)</li>
+    <li>5500 - 5500 MHz (ch 100)</li>
+    <li>5520 - 5520 MHz (ch 104)</li>
+    <li>5540 - 5540 MHz (ch 108)</li>
+    <li>5560 - 5560 MHz (ch 112)</li>
+    <li>5580 - 5580 MHz (ch 116)</li>
+    <li>5600 - 5600 MHz (ch 120)</li>
+    <li>5620 - 5620 MHz (ch 124)</li>
+    <li>5640 - 5640 MHz (ch 128)</li>
+    <li>5660 - 5660 MHz (ch 132)</li>
+    <li>5680 - 5680 MHz (ch 136)</li>
+    <li>5700 - 5700 MHz (ch 140)</li>
+    <li>5745 - 5745 MHz (ch 149)</li>
+    <li>5765 - 5765 MHz (ch 153)</li>
+    <li>5785 - 5785 MHz (ch 157)</li>
+    <li>5805 - 5805 MHz (ch 161)</li>
+    <li>5825 - 5825 MHz (ch 165)</li>
+</ul>
+<li>ping_max_latency_v2 - Maximum allowed latency to relay (type: duration) (Min: 0.1) (Max: 15)
+<li>strong_connection_wifi_rssi_threshold - Weak WiFi connection RSSI threshold (type: float) (Min: -100) (Max: 0)
+<li>verification_timeout - Timeout for verifying an access point or network (type: duration) (Min: 1.0) (Max: 20.0)
+<li>single_adapter_roaming_band_preference - Single adapter WiFi roaming band preference (type: choice)<br />
+Options <a onclick="$('#single_adapter_roaming_band_preference').toggle();">(Show/Hide)</a>:<ul id="single_adapter_roaming_band_preference" style="display:none;">
+    <li>auto - Auto</li>
+    <li>on - On</li>
+    <li>off - Off</li>
+</ul>
+<li>strong_connection_loss_threshold_in_call - Strong connection loss threshold during call (type: float) (Min: 0) (Max: 1)
+<li>assoc_timeout - Association timeout (type: duration) (Min: 0.1) (Max: 15)
+<li>wwan_tier_4g - Tier used for 4G/LTE cellular connections (type: choice)<br />
+Options <a onclick="$('#wwan_tier_4g').toggle();">(Show/Hide)</a>:<ul id="wwan_tier_4g" style="display:none;">
+    <li>1 - 1: Favorite</li>
+    <li>2 - 2</li>
+    <li>3 - 3</li>
+    <li>4 - 4</li>
+    <li>5 - 5</li>
+    <li>6 - 6: Last Resort</li>
+</ul>
+<li>scan_width - 2.4 GHz scan width (type: float) (Min: 0) (Max: 100)
+<li>wired_tier - Tier used for wired connections (type: choice)<br />
+Options <a onclick="$('#wired_tier').toggle();">(Show/Hide)</a>:<ul id="wired_tier" style="display:none;">
+    <li>1 - 1: Favorite</li>
+    <li>2 - 2</li>
+    <li>3 - 3</li>
+    <li>4 - 4</li>
+    <li>5 - 5</li>
+    <li>6 - 6: Last Resort</li>
+</ul>
+<li>country_ie_consistency_check_enabled - Warn on AP country code inconsistency (type: choice)<br />
+Options <a onclick="$('#country_ie_consistency_check_enabled').toggle();">(Show/Hide)</a>:<ul id="country_ie_consistency_check_enabled" style="display:none;">
+    <li>True - Enabled</li>
+    <li>False - Disabled</li>
+</ul>
+<li>dhcp_exp_backoff_min - DHCP retry period (type: duration) (Min: 0.1) (Max: 120)
+<li>single_adapter_roaming - Single adapter WiFi roaming (type: choice)<br />
+Options <a onclick="$('#single_adapter_roaming').toggle();">(Show/Hide)</a>:<ul id="single_adapter_roaming" style="display:none;">
+    <li>auto - Auto</li>
+    <li>on - On</li>
+    <li>off - Off</li>
+</ul>
+<li>unlikely_frequencies - Unlikely frequencies (type: multiple choice)<br />
+Options <a onclick="$('#unlikely_frequencies').toggle();">(Show/Hide)</a>:<ul id="unlikely_frequencies" style="display:none;">
+    <li>2412 - 2412 MHz (ch 1)</li>
+    <li>2417 - 2417 MHz (ch 2)</li>
+    <li>2422 - 2422 MHz (ch 3)</li>
+    <li>2427 - 2427 MHz (ch 4)</li>
+    <li>2432 - 2432 MHz (ch 5)</li>
+    <li>2437 - 2437 MHz (ch 6)</li>
+    <li>2442 - 2442 MHz (ch 7)</li>
+    <li>2447 - 2447 MHz (ch 8)</li>
+    <li>2452 - 2452 MHz (ch 9)</li>
+    <li>2457 - 2457 MHz (ch 10)</li>
+    <li>2462 - 2462 MHz (ch 11)</li>
+    <li>2467 - 2467 MHz (ch 12)</li>
+    <li>2472 - 2472 MHz (ch 13)</li>
+    <li>5180 - 5180 MHz (ch 36)</li>
+    <li>5200 - 5200 MHz (ch 40)</li>
+    <li>5220 - 5220 MHz (ch 44)</li>
+    <li>5240 - 5240 MHz (ch 48)</li>
+    <li>5260 - 5260 MHz (ch 52)</li>
+    <li>5280 - 5280 MHz (ch 56)</li>
+    <li>5300 - 5300 MHz (ch 60)</li>
+    <li>5320 - 5320 MHz (ch 64)</li>
+    <li>5500 - 5500 MHz (ch 100)</li>
+    <li>5520 - 5520 MHz (ch 104)</li>
+    <li>5540 - 5540 MHz (ch 108)</li>
+    <li>5560 - 5560 MHz (ch 112)</li>
+    <li>5580 - 5580 MHz (ch 116)</li>
+    <li>5600 - 5600 MHz (ch 120)</li>
+    <li>5620 - 5620 MHz (ch 124)</li>
+    <li>5640 - 5640 MHz (ch 128)</li>
+    <li>5660 - 5660 MHz (ch 132)</li>
+    <li>5680 - 5680 MHz (ch 136)</li>
+    <li>5700 - 5700 MHz (ch 140)</li>
+    <li>5745 - 5745 MHz (ch 149)</li>
+    <li>5765 - 5765 MHz (ch 153)</li>
+    <li>5785 - 5785 MHz (ch 157)</li>
+    <li>5805 - 5805 MHz (ch 161)</li>
+    <li>5825 - 5825 MHz (ch 165)</li>
+</ul>
+<li>scan_type - Scan type (type: choice)<br />
+Options <a onclick="$('#scan_type').toggle();">(Show/Hide)</a>:<ul id="scan_type" style="display:none;">
+    <li>active_broadcast - Active broadcast</li>
+    <li>active_directed - Active directed</li>
+    <li>passive - Passive</li>
+</ul>
+<li>reassociate_hysteresis_moving - Secondary interface hysteresis when moving (type: float) (Min: 1) (Max: 100)
+<li>wifi_tier_5000 - Tier used for 5 GHz WiFi access points (type: choice)<br />
+Options <a onclick="$('#wifi_tier_5000').toggle();">(Show/Hide)</a>:<ul id="wifi_tier_5000" style="display:none;">
+    <li>1 - 1: Favorite</li>
+    <li>2 - 2</li>
+    <li>3 - 3</li>
+    <li>4 - 4</li>
+    <li>5 - 5</li>
+    <li>6 - 6: Last Resort</li>
+</ul>
+<li>wifi_tier_2400 - Tier used for 2.4 GHz WiFi access points (type: choice)<br />
+Options <a onclick="$('#wifi_tier_2400').toggle();">(Show/Hide)</a>:<ul id="wifi_tier_2400" style="display:none;">
+    <li>1 - 1: Favorite</li>
+    <li>2 - 2</li>
+    <li>3 - 3</li>
+    <li>4 - 4</li>
+    <li>5 - 5</li>
+    <li>6 - 6: Last Resort</li>
+</ul>
+<li>max_txpower - Maximum TX power (type: int) (Min: 0) (Max: 30)
+<li>wwan_tier_pre_4g - Tier used for pre-4G cellular connections (type: choice)<br />
+Options <a onclick="$('#wwan_tier_pre_4g').toggle();">(Show/Hide)</a>:<ul id="wwan_tier_pre_4g" style="display:none;">
+    <li>1 - 1: Favorite</li>
+    <li>2 - 2</li>
+    <li>3 - 3</li>
+    <li>4 - 4</li>
+    <li>5 - 5</li>
+    <li>6 - 6: Last Resort</li>
+</ul>
+<li>captive_portal_timeout - Timeout for opening captive portal URL (type: duration) (Min: 0.1) (Max: 30.0)
+
+
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
+
+
+<div class="tags">
+    
+</div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Suitable Technologies. All rights reserved.<br />
+<p>Page last updated:</span> March 8, 2017<br/> Site last generated: Sep 21, 2017<br />
+<p><img src="/img/SuitableLogo.png" alt="Suitable Technologies Logo" width="150" /></p>
+                </div>
+            </div>
+</footer>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+</body>
+
+</html>

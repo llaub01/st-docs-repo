@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" pilot, software, call, install, app, camera, audio">
+<title>Using the Beam App  | </title>
+<link rel="stylesheet" href="/css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/modern-business.css">
+<link rel="stylesheet" href="/css/lavish-bootstrap.css">
+<link rel="stylesheet" href="/css/customstyles.css">
+<link rel="stylesheet" href="/css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.0/anchor.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005/feed.xml">
+
+
+
+
+ 
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://suitabletech.com"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a class="no_icon" href="">Documentation</a></li>
+                
+                
+                
+                <li><a href="https://support.suitabletech.com" target="_blank" class="no_icon">Help Center</a></li>
+                
+                
+                
+                <li><a href="https://suitabletech.com/manage" target="_blank" class="no_icon">Beam Manager</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="/js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '/search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Using the Beam App">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <!-- <li class="sidebarTitle">Beam Smart Presence Systems </li> -->
+    
+    
+    
+    
+    <li>
+    
+        
+        <a href="/">Overview</a>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Information and Requirements</a>
+        <ul>
+            
+            
+            
+            <li><a href="/product-info/">Beam Information and Requirements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/network/">Beam Network</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/safety-security/">Beam Safety and Security</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/product-info/4g/">Supported 4G Modems and Hotspots</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam User</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-user/">Getting Started as a Beam User</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="/beam-user/using-beam-app/">Using the Beam App FAQ</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Getting Started as a Beam Administrator</a>
+        <ul>
+            
+            
+            
+            <li><a href="/beam-admin/">Getting Started as a Beam Administrator</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/basic-beam/">Managing with the Basic Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/adv-beam/">Managing with the Advanced Beam Manager</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/usb-config/">Configure Beam with a USB Flash Drive</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/beam-admin/network-diagnostics/">Run Network Diagnostics from the Beam App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam User Guides</a>
+        <ul>
+            
+            
+            
+            <li><a href="/user-guides/">Beam User Guides</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/desktop-app/">Beam Desktop App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/mobile-app/">Beam Mobile App User Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/basic-beam-mgr/">Basic Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/adv-beam-mgr/">Advanced Beam Manager Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="/user-guides/beam-beampro-ui/">Beam and BeamPro SPS UI User Guide</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam How-To Videos</a>
+        <ul>
+            
+            
+            
+            <li><a href="/how-to-vids/">Beam How-To Videos</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Assembly Disassembly and Packaging</a>
+        <ul>
+            
+            
+            
+            <li><a href="/assembly-instr/">Beam Assembly Disassembly and Packaging</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+    
+    
+    <li>
+    
+        
+        <a href="#">Beam Management API Documentation</a>
+        <ul>
+            
+            
+            
+            <li><a href="/api/">Beam Management API Documentation</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Using the Beam App</h1>
+</div>
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+    
+
+    
+
+    
+
+  <h2 id="where-do-i-begin">Where do I begin?</h2>
+
+<p>You will need to install our software on your computer in order to use Beam. If you don’t have it already, please visit <a href="https://suitabletech.com/installers/">our installers page</a>.</p>
+
+<h2 id="how-do-i-sign-in-to-beam">How do I sign in to Beam?</h2>
+
+<p>You’ll need an account to connect to a Beam. If you’ve received an invitation from a Beam Administrator, you already have an account and you simply need to pick a password.</p>
+
+<p>If you haven’t received an invitation from a Beam owner or administrator yet, ask them to invite you.</p>
+
+<p>In the invitation email you receive, click on the “Activate account” button. At the “Activate account” page we’ll ask you to choose a password. You’ll use this password to sign into the Beam App and any other Beam services in the future. You can also choose to sign in with Google or SSO if your Beam Organization allows these authentication methods. Otherwise, your Beam username is your email address.</p>
+
+<p>If you already had a Beam account and you set a password previously, you’re all set!</p>
+
+<h2 id="how-do-i-start-a-beam-call">How do I start a Beam call?</h2>
+
+<p>Open the Beam application on your computer or mobile device. Sign in with your email address and the password that you chose in step 1. If you chose to sign in with Google or SSO instead, click the appropriate button.</p>
+
+<p><img src="/img/desktop-app/LoggingIn-BeamDesktopLogin.jpg" alt="SignIn" /></p>
+
+<p>Once you sign in, you’ll be asked to watch a short video or slideshow about Beam operation and safety. You will then be prompted to test and adjust audio and video settings. Once you are happy with settings and continue, you will be sent to your Beam Lobby where you will see a list of Beams that are available to you. Find one that’s marked with a blue “Beam In” button and click it to start your first Beam call.</p>
+
+<p><img src="/img/using-beam-app/BeamsTab-BeamLobby.png" alt="BeamLobby" /></p>
+
+<p>You’re connected! Now you can drive your Beam to converse with locals. Say hello to your friends, family, or coworkers!</p>
+
+<h2 id="how-do-i-drive-a-beam">How do I drive a Beam?</h2>
+
+<p>Once you’ve connected to a Beam, there are three ways you can drive:</p>
+
+<ol>
+  <li>
+    <p>Press either the arrow keys or the W, A, S, and D, keys. Simultaneously, holding down the Shift key will increase your speed.</p>
+  </li>
+  <li>
+    <p>Click and hold your mouse button in the navigation view. The Beam will drive in the direction of your mouse cursor. The farther your cursor is from the Beam’s base, the faster it will go.</p>
+  </li>
+  <li>
+    <p>Using a compatible gamepad, hold the “live-man” button and move the right joystick. <a href="#can-i-drive-with-a-joystick-or-gamepad-controller">More details on controlling Beam with a gamepad</a>.</p>
+  </li>
+</ol>
+
+<h2 id="when-i-drive-what-do-the-blue-lines-in-the-bottom-camera-view-mean">When I drive, what do the blue lines in the bottom camera view mean?</h2>
+
+<p>The lines trace the path that the Beam will follow when you drive it. The animated white segments indicate the speed with which it will move.</p>
+
+<p><img src="/img/using-beam-app/Guidelines2.gif" alt="BeamGuidelines" /></p>
+
+<h2 id="how-do-i-know-how-loud-i-am">How do I know how loud I am?</h2>
+
+<p>There are two ways to gauge your speaking volume on Beam:</p>
+
+<ol>
+  <li>
+    <p>Look at the mic level indicator, located in the self view area on the bottom right. For a normal office environment, you want it to be in the middle of the range (approximately 3 segments).</p>
+  </li>
+  <li>
+    <p>Ask a local person, “Hi, how do I sound?”</p>
+  </li>
+</ol>
+
+<p>For more information about audio on Beam, see the <a href="https://support.suitabletech.com/customer/en/portal/articles/2594297-how-do-i-change-my-audio-settings-">How do I change my audio settings?</a> knowledgebase article in the Beam Help Center.</p>
+
+<p><img src="/img/using-beam-app/SelfView.jpg" alt="AudioLevel" /></p>
+
+<h2 id="can-i-zoom-the-cameras">Can I zoom the cameras?</h2>
+
+<p>Yes. You can zoom the top camera in three ways:</p>
+
+<ol>
+  <li>
+    <p>Double-click in the head view window to zoom in and out.</p>
+  </li>
+  <li>
+    <p>Click within the head view and use your mouse scroll wheel to zoom in/out.</p>
+  </li>
+  <li>
+    <p>Click the magnifying glass icon within the head view and drag the zoom slider up to zoom in and down to zoom out.</p>
+  </li>
+</ol>
+
+<p>To zoom the navigation camera, click on the magnifying glass icon within the navigation view and drag the zoom slider up to zoom in and down to zoom out.</p>
+
+<h2 id="is-there-a-way-for-me-to-change-where-the-top-camera-is-pointing">Is there a way for me to change where the top camera is pointing?</h2>
+
+<p>Yes. You can pan and tilt the top camera view by clicking on it and dragging it.</p>
+
+<h2 id="can-i-drive-with-the-camera-view-zoomed-or-panned">Can I drive with the camera view zoomed or panned?</h2>
+
+<p>Sorry, no. It is difficult to drive safely this way. As a precaution, the camera will automatically reset to normal view once you start driving.</p>
+
+<h2 id="something-seems-to-be-wrong-with-my-connection-how-can-i-figure-out-whats-going-on">Something seems to be wrong with my connection. How can I figure out what’s going on?</h2>
+
+<p>Place your mouse cursor over the network indicator located above the self view area on the bottom right of the Beam App or press and hold the period key (.) to display Beam Network Metrics panel. This panel shows your bandwidth, latency, packet loss, and Beam WiFi signal statistics. Text displayed in red signifies any value that is below the minimum thresholds. If you have items highlighted in red, you may experience a poor call experience.</p>
+
+<p><img src="/img/using-beam-app/NetworkMetrics.jpg" alt="NetworkMetrics" /></p>
+
+<p>For more information, check out the <a href="https://support.suitabletech.com">Beam Help Center</a>.</p>
+
+<h2 id="i-feel-like-im-driving-too-quickly-or-too-slowly-can-i-change-this">I feel like I’m driving too quickly or too slowly. Can I change this?</h2>
+
+<p>Yes. Located on the bottom of your navigation camera view is a slider which adjusts you driving speed. If this control is not shown, you can re-enable it by going to Options&gt;Advanced and unchecking “hide driving speed controls”.</p>
+
+<p><img src="/img/using-beam-app/SpeedSlider.jpg" alt="SpeedSlider" /></p>
+
+<h2 id="can-i-drive-with-a-joystick-or-gamepad-controller">Can I drive with a joystick or gamepad controller?</h2>
+
+<p>Yes, you can drive with an XBox gamepad controller. The wired (USB) version is recommended. As a safety precaution, you will be asked to enable each controller you connect to your computer. A graphic with the control mapping can be displayed by pressing the BACK button on the controller or moving your mouse over the joystick indicator icon.</p>
+
+<p><em>Note: To use a Xbox controller with Mac OS X, you will need to install a driver for that platform, available <a href="https://github.com/360Controller/360Controller/releases">here</a>.</em></p>
+
+<h2 id="how-long-can-i-keep-beam-on-hold">How long can I keep Beam on hold?</h2>
+
+<p>If you place a call on hold, your call will be disconnected if you keep it on hold for more than 15 minutes.</p>
+
+<h2 id="what-should-i-do-when-im-finished-using-a-beam-how-do-i-dock-it">What should I do when I’m finished using a Beam? How do I dock it?</h2>
+
+<p>To dock a Beam using the built in Assisted Docking feature:</p>
+
+<ol>
+  <li>
+    <p>Drive up to the Beam dock.</p>
+  </li>
+  <li>
+    <p>When the Beam Dock comes into full view in the navitation camera, wait for the dock to highlight in green.</p>
+  </li>
+  <li>
+    <p>When prompted, press and hold the “P” key to park.</p>
+  </li>
+  <li>
+    <p>The Beam will calculate the distance to the charger and park itself.</p>
+  </li>
+  <li>
+    <p>Release the “P” key once the battery charging indicator appears on the Beam base.</p>
+  </li>
+</ol>
+
+<p><img src="/img/using-beam-app/AssistedDocking2.jpg" alt="AssistedDocking" /></p>
+
+<p>To dock a Beam manually:</p>
+
+<ol>
+  <li>
+    <p>Drive to an available docking station.</p>
+  </li>
+  <li>
+    <p>Spin the Beam around and drive it in backwards, so that the cameras are facing out, centered on the white line on the dock.</p>
+  </li>
+</ol>
+
+<p>The green light on the base indicates you have made contact with the charger. Once on the dock, you will notice a battery charging indicator appear on your Beam’s base. If the indicator disappears, you will need to readjust your position on the dock to ensure the Beam is sucessfully charging.</p>
+
+<p><img src="/img/using-beam-app/DockCompare.jpg" alt="BeamDocking" /></p>
+
+<h2 id="how-do-i-end-a-call">How do I end a call?</h2>
+
+<p>There are two ways:</p>
+
+<ol>
+  <li>
+    <p>Select the “Beam Out” button on the far right side of the tool bar.</p>
+  </li>
+  <li>
+    <p>Select the “Beam Out” button on the top right of the Beam App.</p>
+  </li>
+</ol>
+
+<p><em>Note: If you are not properly docked, a warning message will appear asking you to dock. You may still end the call by clicking on “end call anyway” (but doing so may be inconvenient to others).</em></p>
+
+<p><img src="/img/using-beam-app/EndCall_02.png" alt="EndBeamCall" /></p>
+
+<h2 id="can-i-share-my-computer-screen-on-the-beam">Can I share my computer screen on the Beam?</h2>
+
+<p>Yes! There is a screen sharing button located on your session toolbar. Clicking on this button will show you a menu with all of your active windows and desktops. Clicking on any of these items will start the screen-sharing process. To end a screen sharing session, simply select either the “End Screen Sharing Button” on the toolbar or the “End Screen Sharing Button” on the top right corner of the main camera view.</p>
+
+<p><img src="/img/using-beam-app/ScreenSharing.png" alt="ScreenShare" /></p>
+
+<h2 id="can-i-sort-the-contents-of-my-beam-lobby">Can I sort the contents of my Beam Lobby?</h2>
+
+<p>Yes, each of the columns in the browser can be sorted in either ascending or descending order. To sort a list, click any of the column headers.  It will highlight with an arrow indicating whether the list is ascending or descending.</p>
+
+<p><img src="/img/using-beam-app/BeamsTab-BeamLobby.png" alt="Sorting the Beam Browser" /></p>
+
+<h2 id="how-do-i-set-or-change-my-status">How do I set or change my status?</h2>
+
+<p>Your status is a line of text that appears on the bottom of the Beam screen during your call. Many Beam Users use this as a name tag or put a clever phrase in it. The status can be changed at any time by typing into the text box located below your self view in the Beam App.</p>
+
+<p><img src="/img/using-beam-app/SelfView.jpg" alt="StatusBar" /></p>
+
+<h2 id="how-can-i-see-how-much-battery-life-i-have-remaining">How can I see how much battery life I have remaining?</h2>
+
+<p>There is a battery icon located above your self view showing how much time remains on your battery. The system will also notify you when the battery has 30 minutes remaining and again when there are only 5 minutes remaining.</p>
+
+<p><img src="/img/using-beam-app/BatteryIndicator.jpg" alt="BatteryIndicator" /></p>
+
+<h2 id="is-there-a-quick-way-for-me-get-help-with-the-beam-software">Is there a quick way for me get help with the Beam software?</h2>
+
+<p>Yes, we have included a help mode that can be accessed by pressing the “?” key on your keyboard or you can visit the <a href="https://support.suitabletech.com">Beam Help Center</a></p>
+
+<h2 id="do-any-keyboard-shortcuts-exist-for-the-beam-software">Do any keyboard shortcuts exist for the Beam software?</h2>
+
+<p>Yes, we have created keyboard shortcuts for many of the features of the Beam application. For a list of these shortcuts, you can hold down the F12 key on your keyboard or download the handy <a href="/pdf/BeamQuickStartGuide.pdf">Beam App Quickstart Guide</a>.</p>
+
+
+<div class="tags">
+    
+</div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Suitable Technologies. All rights reserved.<br />
+<p>Page last updated:</span> March 8, 2017<br/> Site last generated: Sep 21, 2017<br />
+<p><img src="/img/SuitableLogo.png" alt="Suitable Technologies Logo" width="150" /></p>
+                </div>
+            </div>
+</footer>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+</body>
+
+</html>

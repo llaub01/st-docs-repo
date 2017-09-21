@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+
+
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/product-info/4g/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/user-guides/adv-beam-mgr/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-admin/adv-beam/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/user-guides/basic-beam-mgr/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-admin/basic-beam/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/user-guides/beam-beampro-ui/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/user-guides/desktop-app/</loc>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/how-to-vids/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/product-info/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/user-guides/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/assembly-instr/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-user/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-admin/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/user-guides/mobile-app/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-admin/network-diagnostics/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/product-info/network/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/product-info/safety-security/</loc>
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-admin/usb-config/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/users/</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4005/beam-user/using-beam-app/</loc>
+  </url>
+  
+  
+</urlset>
