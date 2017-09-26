@@ -208,20 +208,10 @@ a.dropdown-toggle, .navbar-inverse .navbar-nav > li > a {
     bottom: 35px;
 }
 
-/*#mysidebar .nav {
-    background-color: #EAEAEA;
-    margin: 0;
-}*/
-
 #mysidebar li {
-    /*height: 50px;*/
     background-color: #EAEAEA;
+    margin-bottom: ;
 }
-
-
-/*ul#mysidebar {
-    background-color: #EAEAEA;
-}*/
 
 .row {
     margin-top: 20px;
@@ -233,4 +223,50 @@ a.dropdown-toggle, .navbar-inverse .navbar-nav > li > a {
 
 .post-content .row img {
     width: 160px;
+    margin-left: -20px;
+}
+
+footer {
+    clear: both;
+    background-color: #45585e;
+    border-color: #45585e;
+    padding-top: 30px;
+    z-index: 100;
+}
+
+#uk-container {
+    background: #45585e;
+    border-color: #45585e;
+    letter-spacing: 0.025em;
+    text-transform: none;
+}
+
+hr.shaded {
+    height: 12px;
+    border: 0;
+    box-shadow: none;
+    margin-top: 10px;
+    background: white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.nav ul li a {
+    border-top: none;
+}
+
+.rd-footer-left .rd-footermenu > div.moduletable > ul.nav.menu > li > ul.nav-child > li > a {
+    background-color: #45585C;
+    line-height: 23px;
+    letter-spacing: 0.025em;
+}
+
+.rd-footer-left .rd-footermenu > div.moduletable > ul.nav.menu > li a {
+    background-color: #45585C;
+    line-height: 23px;
+    letter-spacing: 0.025em;
+}
+
+.rd-footer-left .rd-footermenu > div.moduletable > ul.nav.menu > li > a:hover {
+    background-color: #14D5B0;
 }
