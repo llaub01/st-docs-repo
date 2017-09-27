@@ -5,8 +5,8 @@
         <description>Documentation for Beam Smart Presence Systems by Suitable Technologies.</description>
         <link>http://localhost:4005/</link>
         <atom:link href="http://localhost:4005/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 27 Sep 2017 10:52:52 -0500</pubDate>
-        <lastBuildDate>Wed, 27 Sep 2017 10:52:52 -0500</lastBuildDate>
+        <pubDate>Wed, 27 Sep 2017 11:06:01 -0500</pubDate>
+        <lastBuildDate>Wed, 27 Sep 2017 11:06:01 -0500</lastBuildDate>
         <generator>Jekyll v3.5.2</generator>
         
     </channel>
